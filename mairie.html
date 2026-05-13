@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mairie - Ville de Lomé</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .glass-dark {
+            background: rgba(27, 27, 31, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "surface-dim": "#dadada",
+                "on-tertiary": "#ffffff",
+                "inverse-surface": "#2f3131",
+                "surface-container-low": "#f3f3f3",
+                "surface-tint": "#5f5e62",
+                "on-primary-fixed": "#1b1b1f",
+                "inverse-on-surface": "#f0f1f1",
+                "tertiary": "#735c00",
+                "surface-container": "#eeeeee",
+                "on-tertiary-fixed-variant": "#574500",
+                "background": "#f9f9f9",
+                "outline": "#78767b",
+                "inverse-primary": "#c8c5cb",
+                "primary-fixed-dim": "#c8c5cb",
+                "primary": "#000000",
+                "on-error": "#ffffff",
+                "secondary": "#0054cb",
+                "on-tertiary-fixed": "#241a00",
+                "on-tertiary-container": "#4f3e00",
+                "on-primary": "#ffffff",
+                "on-background": "#1a1c1c",
+                "outline-variant": "#c8c5cb",
+                "tertiary-container": "#cca730",
+                "surface-variant": "#e2e2e2",
+                "on-surface-variant": "#47464b",
+                "on-secondary-container": "#fefcff",
+                "on-secondary-fixed": "#001847",
+                "secondary-container": "#316ee8",
+                "tertiary-fixed-dim": "#e9c349",
+                "surface-container-highest": "#e2e2e2",
+                "on-surface": "#1a1c1c",
+                "surface-bright": "#f9f9f9",
+                "on-primary-fixed-variant": "#47464b",
+                "primary-fixed": "#e4e1e7",
+                "secondary-fixed-dim": "#b1c5ff",
+                "on-secondary": "#ffffff",
+                "tertiary-fixed": "#ffe088",
+                "primary-container": "#1b1b1f",
+                "on-primary-container": "#848388",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-high": "#e8e8e8",
+                "on-error-container": "#93000a",
+                "error-container": "#ffdad6",
+                "surface": "#f9f9f9",
+                "error": "#ba1a1a",
+                "secondary-fixed": "#dae2ff",
+                "on-secondary-fixed-variant": "#0040a0"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+              },
+              "spacing": {
+                "container-max": "1440px",
+                "gutter": "24px",
+                "margin-desktop": "80px",
+                "margin-mobile": "20px",
+                "unit": "8px",
+                "margin-tablet": "40px"
+              },
+              "fontFamily": {
+                "headline-lg": ["Montserrat"],
+                "display-lg": ["Montserrat"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "label-sm": ["Inter"],
+                "title-md": ["Montserrat"]
+              },
+              "fontSize": {
+                "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "title-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/70 backdrop-blur-xl dark:bg-primary-container/70 border-b border-white/20 shadow-sm">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-title-md font-bold tracking-tight text-primary dark:text-on-secondary-container min-w-0">
+<a class="flex items-center gap-3 hover:opacity-90 transition-opacity" href="index.html">
+<img alt="Commune de Lomé — logo du portail" class="h-10 w-10 shrink-0 object-contain" height="40" src="assets/logo-mairie.svg" width="40"/>
+<span class="whitespace-nowrap truncate max-w-[10rem] sm:max-w-none">Commune de Lomé</span>
+</a>
+</div>
+<div class="hidden md:flex items-center gap-8 lg:gap-10 flex-nowrap shrink-0 font-title-md text-title-md font-Montserrat">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="services.html">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="actualites.html">Actualités</a>
+<a class="text-tertiary font-bold border-b-2 border-tertiary pb-1" href="mairie.html">La Mairie</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="evenements.html">Culture</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="urbanisme.html">Investir</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-primary text-2xl hover:scale-105 transition-transform" data-icon="search">search</button>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-title-md text-sm hover:scale-105 transition-all inline-flex items-center justify-center" href="espace-citoyen.html">
+                    Mon Espace
+                </a>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[870px] w-full flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Mairie de Lomé" class="w-full h-full object-cover" data-alt="A grand, architectural panoramic view of the Lomé City Hall building in Togo during a bright, sunny afternoon. The structure is a blend of modern and colonial West African styles, with clean geometric lines and lush tropical landscaping in the foreground. The lighting is crisp and golden, emphasizing the prestige and civic importance of the location within a vibrant city context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8ezkie-q8kPQmLoSF5w72ZNL7Zx195tl943MvGWBz6pr_YcBro1DtSLIjBm4u2-5IDGCWVjB5zO7hEU_dgLit85nqL-7IkEmtRH2td2nxnDHydgqodK4Nsc-rr9EaVwqxZ47KHQOU8OpvKVQy9KioA3yuuN6AsFg_a6Bdbl1SlH78_nIKDEOhvH_nr9-2a7SrXNvV0EfA4PSwItiinNuQmRix16MZQFEHRh6ZBbLcpGiz0jUgpZLAazp8NoB_YfD_7Pvfv9VHtA"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-desktop w-full max-w-container-max mx-auto">
+<div class="glass-card p-12 max-w-2xl rounded-3xl animate-fade-in-up">
+<span class="text-tertiary font-bold tracking-[0.2em] text-sm uppercase block mb-4">L'Institution Municipale</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-6">Au Cœur de la Cité, au Service du Citoyen</h1>
+<p class="text-body-lg text-on-surface-variant mb-8">La Mairie de Lomé s'engage pour un développement urbain durable, inclusif et innovant, plaçant chaque habitant au centre de ses priorités stratégiques.</p>
+<div class="flex gap-4">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-full font-semibold flex items-center gap-2 hover:scale-105 transition-transform" href="services.html">
+                            Nos Services <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="border border-primary text-primary px-8 py-4 rounded-full font-semibold hover:bg-primary hover:text-on-primary transition-all" href="mairie.html#organisation">
+                            L'Équipe Municipale
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Le Mot du Maire -->
+<section class="py-32 px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="relative group">
+<div class="absolute -inset-4 bg-tertiary/10 rounded-3xl -rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
+<div class="relative h-[600px] overflow-hidden rounded-2xl shadow-2xl">
+<img alt="Maire Koffi Mensah" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A dignified portrait of a West African male official, Mayor Koffi Mensah, wearing a sharp, deep charcoal suit with a subtle gold lapel pin. He stands in a bright, modern office with soft daylight and a background blur showing books and a Togolese flag. The mood is professional, welcoming, and exudes visionary leadership within a high-end minimalist setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_8HaOpFyGJwXIQX_a4wCl5eNG8dHOj_Qe6YPGp3p6sBUMpLCeXSQrSYIqZdRNGDx9nKzvm6geXIJMb4oD1Y2FIX4EcdDtbKQgdSUUjB0bdLAkI4XKCl6_4se57p_WYKpRpD-se4FI2k07ZM82zZwEbtIrycdS2dwuiwPczXEw0LP374LuWSNwW_k7ii0s-nTUWzanbrn2LZBfHlOF1obLfBzo3JaK2i7xIu7HgO4kPHNToqsbgnsLfFulX3jRYd6DstOdxIFJ5Q"/>
+</div>
+<div class="absolute bottom-8 left-8 right-8 glass-dark p-6 rounded-xl">
+<h3 class="text-white font-display-lg text-xl mb-1">M. Koffi Mensah</h3>
+<p class="text-tertiary-fixed font-semibold text-sm">Maire de la Ville de Lomé</p>
+</div>
+</div>
+<div class="flex flex-col justify-center">
+<span class="material-symbols-outlined text-tertiary-container text-6xl mb-6 opacity-40">format_quote</span>
+<h2 class="font-display-lg text-headline-lg text-primary mb-8">Transformer Lomé ensemble</h2>
+<p class="text-body-lg text-on-surface-variant leading-relaxed mb-6">
+                        "Chers concitoyens, Lomé n'est pas seulement notre capitale ; c'est le reflet de notre ambition collective. Ma mission, aux côtés du conseil municipal, est de bâtir une ville résiliente, numérique et accueillante."
+                    </p>
+<p class="text-body-lg text-on-surface-variant leading-relaxed mb-8">
+                        Nous travaillons chaque jour pour moderniser nos infrastructures et simplifier vos démarches administratives grâce à la digitalisation. Ensemble, faisons de Lomé la perle de l'Afrique de l'Ouest.
+                    </p>
+<div class="pt-8 border-t border-surface-variant">
+<img alt="Signature" class="h-16 w-auto opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB82jfjPMuArKzza18gr4YsuHr6zzPLwpuxfHZvoRHJTpeBchOiKCH_UnEzIHI34cQ_atnKIXMfBb7uCwKX_1gsF9tUvUoqs2d8DKr0iUQuyA5egAd_XatpRwN3AZiAmSdJ_WdJm-TwKT-SOzpDyHwYtZLlLwUEW6s6F3s4h8E8qJmDXRG-f8FryFutmiDDlnDdh7-Z93J25wFLpSKCuXkfVI4fj0IdPIFwgAwUP-ggxo7GOgAIFsXk-aRc9nG8lkeLloKphuoIuA"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Organisation Municipale (Bento Grid) -->
+<section class="py-32 bg-surface-container-low overflow-hidden" id="organisation">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-20">
+<span class="text-tertiary font-bold tracking-[0.2em] text-sm uppercase block mb-4">Structure</span>
+<h2 class="font-display-lg text-headline-lg text-primary">Organisation Municipale</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Secretariat -->
+<div class="glass-card p-10 rounded-[32px] hover:scale-[1.02] transition-all group">
+<div class="w-16 h-16 bg-primary-container rounded-2xl flex items-center justify-center mb-8 group-hover:bg-tertiary transition-colors">
+<span class="material-symbols-outlined text-white text-3xl">account_balance</span>
+</div>
+<h3 class="font-title-md text-2xl text-primary mb-4">Secrétariat Général</h3>
+<p class="text-on-surface-variant mb-8">Coordination administrative de haut niveau, gestion des délibérations et suivi des politiques publiques municipales.</p>
+<a class="text-tertiary font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform" href="services.html">
+                            En savoir plus <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+<!-- Technical -->
+<div class="glass-card p-10 rounded-[32px] hover:scale-[1.02] transition-all group">
+<div class="w-16 h-16 bg-primary-container rounded-2xl flex items-center justify-center mb-8 group-hover:bg-tertiary transition-colors">
+<span class="material-symbols-outlined text-white text-3xl">engineering</span>
+</div>
+<h3 class="font-title-md text-2xl text-primary mb-4">Services Techniques</h3>
+<p class="text-on-surface-variant mb-8">Urbanisme, voirie, gestion des déchets et aménagements paysagers pour un cadre de vie d'exception.</p>
+<a class="text-tertiary font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform" href="urbanisme.html">
+                            En savoir plus <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+<!-- Administrative -->
+<div class="glass-card p-10 rounded-[32px] hover:scale-[1.02] transition-all group">
+<div class="w-16 h-16 bg-primary-container rounded-2xl flex items-center justify-center mb-8 group-hover:bg-tertiary transition-colors">
+<span class="material-symbols-outlined text-white text-3xl">payments</span>
+</div>
+<h3 class="font-title-md text-2xl text-primary mb-4">Affaires Administratives</h3>
+<p class="text-on-surface-variant mb-8">Gestion financière, ressources humaines et état civil numérique pour une efficacité maximale.</p>
+<a class="text-tertiary font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform" href="fiscalite.html">
+                            En savoir plus <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Conseil Municipal & Gouvernance -->
+<section class="py-32 px-margin-desktop max-w-container-max mx-auto">
+<div class="bg-primary-container rounded-[40px] p-12 text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-tertiary/20 to-transparent"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-4">
+<h2 class="font-display-lg text-headline-lg text-white mb-6">Gouvernance &amp; Transparence</h2>
+<p class="text-on-primary-container text-body-lg mb-8">Accédez aux décisions qui façonnent l'avenir de notre ville. Un engagement pour l'ouverture et l'intégrité.</p>
+<button class="bg-tertiary-container text-on-tertiary-container px-8 py-3 rounded-full font-bold hover:scale-105 transition-transform">
+                            Calendrier des Conseils
+                        </button>
+</div>
+<div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+<div class="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10">
+<div class="text-tertiary-fixed text-5xl font-bold mb-2">45</div>
+<div class="text-on-primary-container uppercase tracking-widest text-xs font-bold">Conseillers Élus</div>
+</div>
+<div class="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10">
+<div class="text-tertiary-fixed text-5xl font-bold mb-2">12</div>
+<div class="text-on-primary-container uppercase tracking-widest text-xs font-bold">Sessions / An</div>
+</div>
+<div class="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10">
+<div class="text-tertiary-fixed text-5xl font-bold mb-2">100%</div>
+<div class="text-on-primary-container uppercase tracking-widest text-xs font-bold">Transparence</div>
+</div>
+<div class="sm:col-span-3 bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 flex items-center justify-between">
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-tertiary-fixed text-4xl">description</span>
+<div>
+<h4 class="font-bold text-lg">Dernier Procès-Verbal</h4>
+<p class="text-sm text-on-primary-container">Séance ordinaire du 15 Octobre 2024</p>
+</div>
+</div>
+<button class="flex items-center gap-2 bg-white text-primary px-6 py-2 rounded-full font-bold text-sm hover:bg-tertiary-fixed transition-colors">
+<span class="material-symbols-outlined text-sm">download</span> Télécharger PDF
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Histoire du Patrimoine -->
+<section class="py-32 overflow-hidden bg-white">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row gap-20 items-center">
+<div class="w-full md:w-1/2 order-2 md:order-1">
+<span class="text-tertiary font-bold tracking-[0.2em] text-sm uppercase block mb-4">Héritage</span>
+<h2 class="font-display-lg text-headline-lg text-primary mb-8">Un Siècle d'Histoire Municipale</h2>
+<div class="space-y-12">
+<div class="flex gap-6 relative">
+<div class="absolute left-4 top-10 bottom-[-48px] w-[1px] bg-surface-variant"></div>
+<div class="w-8 h-8 rounded-full bg-primary flex-shrink-0 z-10 ring-4 ring-white"></div>
+<div>
+<span class="font-display-lg text-2xl text-tertiary block mb-2">1900s</span>
+<p class="text-on-surface-variant">Premiers fondements de l'administration municipale sous l'influence des architectures coloniales, posant les bases du centre urbain actuel.</p>
+</div>
+</div>
+<div class="flex gap-6 relative">
+<div class="absolute left-4 top-10 bottom-[-48px] w-[1px] bg-surface-variant"></div>
+<div class="w-8 h-8 rounded-full bg-tertiary flex-shrink-0 z-10 ring-4 ring-white"></div>
+<div>
+<span class="font-display-lg text-2xl text-tertiary block mb-2">1960</span>
+<p class="text-on-surface-variant">Indépendance et affirmation de la souveraineté municipale. La mairie devient le symbole de la gestion autonome et de la fierté togolaise.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-8 h-8 rounded-full bg-primary-container flex-shrink-0 z-10 ring-4 ring-white"></div>
+<div>
+<span class="font-display-lg text-2xl text-tertiary block mb-2">Aujourd'hui</span>
+<p class="text-on-surface-variant">Une métropole moderne en pleine expansion, alliant préservation du patrimoine architectural et innovation technologique de pointe.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 grid grid-cols-2 gap-4 order-1 md:order-2">
+<div class="space-y-4 pt-12">
+<img alt="Lomé Historique" class="rounded-2xl grayscale brightness-75 hover:grayscale-0 hover:brightness-100 transition-all duration-500 w-full aspect-square object-cover" data-alt="A historical black and white photograph of an old West African government building from the early 20th century. The architecture features wide arched verandas and colonial facades, surrounded by palm trees and unpaved roads. The image has a soft, vintage grainy texture, evoking a sense of deep history and the origins of municipal governance in Lomé." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgOIsbXlIz4axavBs5QTvimDVpK0xrfYXhHyYKtBB5EGQLly2EM-0MKM3x5ogtoUbQzZfDw4_kxV6q3yGCm7gF6HE41hHMDCfn5QIxjzxfnBLbMvLbee8mf8LR3UzIBNSF3l6vr1havRamtcAPZdQ_Hut2Mykp4Z-W87vlmmQwGjZ0GFZO87sqgTOVCR40CyaosdMFTHZNNZnOz2Ogt-WKm5GfB_CnNTk92SVpDaUjJNND6V3SqAwANdJgABVz6lmoecpRSkcOog"/>
+<img alt="Lomé Moderne" class="rounded-2xl w-full aspect-[3/4] object-cover" data-alt="A modern architectural interior shot of a contemporary government office in Lomé. Large windows floor the space with bright sunlight, highlighting clean white surfaces, polished floors, and high-end minimalist furniture. The view through the window shows the bustling, modern skyline of Togo's capital. The lighting is high-key and professional, representing futuristic civic trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuYxZQWNKl5CDGll6_v7Iti25BqrYqlYRrfJa-bzcMbHAWoQDyO38-_Mfw5Na-aQ5_q3g_QCqmMtNXjFgf5iHTFfN2BxKONM5_edI-gV41Gr5ab6gT8xd_EA3K1Gc9vwa6hebt5mnWwo0Y54aHu64BaGRm9_vhbmvsLbFnXQ9_9IEflMAQ1ttdX7a_ZwuNjboFnVrN4UHzNHiapPx24-SZK2hFrr_DOhr4pCYV_l5NkneKHfnO0Rx95mgY9mbv9CKlfTQJsJRNag"/>
+</div>
+<div class="space-y-4">
+<img alt="Architecture Citadine" class="rounded-2xl w-full aspect-[3/4] object-cover" data-alt="A striking perspective of a modern office building exterior in Lomé, featuring glass cladding that reflects the blue sky and white clouds. The structure is sharp and geometric, symbolizing progress and digital sophistication. The foreground shows clean, modern urban planning with manicured greenery. The style is high-end minimalism with a luminous, transparent feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDPOzQALaN5eZg7U_zef-b8vv71fQjEarNwrCH1dgUp0T9bbPjShIPADwiC8BaQuK3kIeUh_-3TPvfmr3rTYeP2Cr1qdUE8oR-BbZdzgJi12iYl7hwa-5dVbMH_KrBj0bwand6SrcvqAcT-bM7be86J2a_uHJCiDKYoNz1GvIAaMQP1VlGnWq4sjUNXj-TCZtzSKELNi_uEztyiAj6_jLdnrMNazHptEb_FvTdehNQcnu-50v72ACBDa9LixmTX_gSwOBosnVIug"/>
+<img alt="Cérémonie Civique" class="rounded-2xl grayscale brightness-75 hover:grayscale-0 transition-all duration-500 w-full aspect-square object-cover" data-alt="An archive photograph of a formal civic ceremony in Lomé from the mid-20th century. Local leaders and citizens are gathered in front of a monumental civic arch, with flags waving in the breeze. The scene is captured in high-contrast black and white, preserving a moment of national pride and historical transition. The mood is solemn yet hopeful." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChInCZO_ncszVEJqrYX3_RZZ8oQDpf8-UNX5WlMXvilbH8PV8ILsnXwA7BfXAoX60fpjkKP1KdL0aOXAfBJOGEiZxUDHFfo0sgsNpUg2FIXMCHZ9Lf6SYhJtXukzCF_5F6x3geHCMucRTv1j1479dAJzFvPP_fs8KJcxC0HBE4WRt0CXHY13NlD79ktDB7Qg8fi3vHhyPUQJdk30mbitHjrvm5d78_gQw-L-Whe2_qVOqQfT7yVzmhfyTKaha7Qrdzw7-K0mBrOw"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (aligné accueil + image) -->
+<footer class="relative overflow-hidden text-white">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-br from-[#001847] via-[#002466] to-[#000818]"></div>
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80')] bg-cover bg-center opacity-5"></div>
+<div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 blur-[120px]"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 blur-[120px]"></div>
+</div>
+<div class="relative z-10 py-24">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-margin-desktop max-w-container-max mx-auto">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm">
+<img alt="Commune de Lomé — logo du portail" class="h-8 w-8 object-contain" height="32" src="assets/logo-mairie.svg" width="32"/>
+</div>
+<span class="font-title-md text-title-md text-white font-bold">Commune de Lomé</span>
+</div>
+<p class="text-blue-200/80 font-body-md mb-6">Excellence & Innovation au service du Citoyen.</p>
+<div class="flex gap-3">
+<a class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110" href="https://lome.tg" rel="noopener noreferrer" target="_blank" aria-label="Site web">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110" href="mailto:contact@lome.tg" aria-label="Email">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110" href="tel:+22822210000" aria-label="Téléphone">
+<span class="material-symbols-outlined text-lg">call</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="mb-6 font-title-md text-title-md text-white font-semibold">Navigation</h4>
+<ul class="space-y-3 text-sm text-blue-200/70">
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="index.html"><span class="material-symbols-outlined text-base">arrow_right</span>Accueil</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="services.html"><span class="material-symbols-outlined text-base">arrow_right</span>Citoyenneté</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="urbanisme.html"><span class="material-symbols-outlined text-base">arrow_right</span>Urbanisme</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="actualites.html"><span class="material-symbols-outlined text-base">arrow_right</span>Actualités</a></li>
+</ul>
+</div>
+<div>
+<h4 class="mb-6 font-title-md text-title-md text-white font-semibold">Informations</h4>
+<ul class="space-y-3 text-sm text-blue-200/70">
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="plan-du-site.html#mentions-legales"><span class="material-symbols-outlined text-base">arrow_right</span>Mentions légales</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="contact.html"><span class="material-symbols-outlined text-base">arrow_right</span>Contact</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="plan-du-site.html#accessibilite"><span class="material-symbols-outlined text-base">arrow_right</span>Accessibilité</a></li>
+</ul>
+</div>
+<div>
+<h4 class="mb-6 font-title-md text-title-md text-white font-semibold">Contact</h4>
+<div class="space-y-4 text-sm text-blue-200/70">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-blue-400 mt-0.5">location_on</span>
+<p>Hôtel de Ville<br/>Avenue de la Mairie, Lomé, Togo</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-400">call</span>
+<p>+228 22 21 00 00</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-400">schedule</span>
+<p>Lun - Ven: 07h00 - 17h30</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mx-auto mt-16 flex max-w-container-max flex-col items-center justify-between gap-4 border-t border-white/10 px-4 pt-8 text-xs text-blue-200/50 sm:px-margin-desktop sm:flex-row">
+<p>© 2024 Commune de Lomé - Excellence &amp; Innovation au service du Citoyen.</p>
+<div class="flex gap-6">
+<a class="transition-colors hover:text-white" href="plan-du-site.html#mentions-legales">Confidentialité</a>
+<a class="transition-colors hover:text-white" href="plan-du-site.html#cookies">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

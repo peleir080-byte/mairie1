@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Événements - Commune de Lomé</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dadada",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-container": "#1b1b1f",
+                        "tertiary-fixed": "#ffe088",
+                        "secondary-fixed-dim": "#b1c5ff",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#47464b",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-container": "#fefcff",
+                        "primary": "#000000",
+                        "on-primary-fixed-variant": "#47464b",
+                        "inverse-primary": "#c8c5cb",
+                        "secondary-container": "#316ee8",
+                        "inverse-surface": "#2f3131",
+                        "outline": "#78767b",
+                        "on-primary-container": "#848388",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#5f5e62",
+                        "secondary-fixed": "#dae2ff",
+                        "on-tertiary-container": "#4f3e00",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#1b1b1f",
+                        "surface-container": "#eeeeee",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "on-background": "#1a1c1c",
+                        "tertiary": "#735c00",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-bright": "#f9f9f9",
+                        "outline-variant": "#c8c5cb",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "secondary": "#0054cb",
+                        "background": "#f9f9f9",
+                        "on-secondary-fixed-variant": "#0040a0",
+                        "on-secondary-fixed": "#001847",
+                        "primary-fixed-dim": "#c8c5cb",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#e4e1e7",
+                        "surface": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "tertiary-container": "#cca730",
+                        "on-tertiary-fixed": "#241a00",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "margin-tablet": "40px",
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "title-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "display-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "title-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .glass-card:hover {
+            transform: scale(1.02);
+            backdrop-filter: blur(30px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #735c00 0%, #cca730 100%);
+        }
+        .no-scrollbar {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .calendar-strip {
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-white/20 shadow-sm">
+<div class="flex justify-between items-center w-full px-margin-desktop py-unit max-w-container-max mx-auto h-20">
+<div class="font-display-lg text-title-md font-bold tracking-tight text-primary min-w-0"><a class="flex items-center gap-3 hover:opacity-90 transition-opacity" href="index.html"><img alt="Commune de Lomé — logo du portail" class="h-10 w-10 shrink-0 object-contain" height="40" src="assets/logo-mairie.svg" width="40"/><span class="whitespace-nowrap truncate max-w-[10rem] sm:max-w-none">Commune de Lomé</span></a></div>
+<nav class="hidden md:flex gap-8 lg:gap-10 flex-nowrap items-center shrink-0">
+<a class="font-title-md text-title-md font-Montserrat text-on-surface-variant hover:text-primary transition-colors duration-300" href="services.html">Services</a>
+<a class="font-title-md text-title-md font-Montserrat text-on-surface-variant hover:text-primary transition-colors duration-300" href="actualites.html">Actualités</a>
+<a class="font-title-md text-title-md font-Montserrat text-tertiary font-bold border-b-2 border-tertiary pb-1" href="evenements.html">Culture</a>
+<a class="font-title-md text-title-md font-Montserrat text-on-surface-variant hover:text-primary transition-colors duration-300" href="mairie.html">Investir</a>
+<a class="font-title-md text-title-md font-Montserrat text-on-surface-variant hover:text-primary transition-colors duration-300" href="index.html">Tourisme</a>
+</nav>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-tertiary">search</span>
+<input class="pl-10 pr-4 py-2 rounded-full border-none bg-surface-container-low text-body-md w-64 focus:ring-2 focus:ring-tertiary/20 transition-all" placeholder="Rechercher..." type="text"/>
+</div>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-title-md text-body-md hover:scale-105 transition-transform active:scale-95 duration-150 inline-flex items-center justify-center" href="espace-citoyen.html">Mon Espace</a>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section: Festival International des Arts de Lomé -->
+<section class="relative h-[819px] w-full overflow-hidden">
+<img alt="Festival Arts Lomé" class="absolute inset-0 w-full h-full object-cover" data-alt="A grand, high-key digital art photograph capturing a large-scale outdoor festival in Lomé at night. The scene is illuminated by spectacular golden and blue stage lighting, reflecting off modern glass structures. Diverse crowds are silhouettes against a vibrant, energetic stage performance. The atmosphere is prestigious and futuristic, featuring a clean minimalist composition with deep shadows and luminous highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4W9gTh_E_WdXY754_bOitNBs_rfWT7__OgSQx3VzALke7_inDcf5bF3z_YNsWtQaEjSI3CoLMJGHUw5xBmRXjo2P7DYUAS6Yn5mqn7vsvd87JFXaTO7bN4ExBMt1rAjBZusL2dX0xwlDmQ23EyKSBMMwW-7IEE5d8RPnmB0x8BGJeCRhG5_vIjN2I3ptR4rhVeT3JPnOekTb8Q2UIItEeeYCPj0st0GMyg0Uxqsjp7DIy2dc_Q_18yXFWTbR3EC6AkOCztMJsIw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="relative z-10 h-full flex flex-col justify-end px-margin-desktop pb-24 max-w-container-max mx-auto">
+<div class="glass-panel p-10 rounded-[40px] max-w-3xl space-y-6">
+<h1 class="font-display-lg text-display-lg text-primary leading-tight">Festival International des Arts de Lomé</h1>
+<div class="flex gap-10 items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">calendar_today</span>
+<div>
+<p class="text-label-sm uppercase text-on-surface-variant font-bold">Date</p>
+<p class="font-title-md text-body-lg">15 - 20 Décembre 2024</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">location_on</span>
+<div>
+<p class="text-label-sm uppercase text-on-surface-variant font-bold">Lieu</p>
+<p class="font-title-md text-body-lg">Palais des Congrès</p>
+</div>
+</div>
+</div>
+<div class="pt-4">
+<button class="gold-gradient text-on-primary px-10 py-4 rounded-full font-title-md text-body-lg shadow-xl hover:scale-105 transition-all flex items-center gap-3">
+                            Réserver Votre Place
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Date Picker / Interactive Calendar -->
+<section class="py-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between mb-10">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Calendrier des événements</h2>
+<p class="text-on-surface-variant font-body-lg">Explorez la vitalité culturelle et sportive de la capitale.</p>
+</div>
+<div class="flex shrink-0 items-center gap-3">
+<button type="button" id="evt-cal-prev" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-outline/20 bg-white text-primary shadow-sm transition hover:border-secondary hover:bg-secondary-fixed hover:text-secondary" aria-label="Jours précédents">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<span class="min-w-[8.5rem] text-center font-title-md text-title-md text-primary">Décembre 2024</span>
+<button type="button" id="evt-cal-next" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-outline/20 bg-white text-primary shadow-sm transition hover:border-secondary hover:bg-secondary-fixed hover:text-secondary" aria-label="Jours suivants">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="relative rounded-3xl border border-outline/15 bg-gradient-to-br from-white via-surface-container-low to-secondary-fixed/20 p-4 shadow-lg ring-1 ring-black/5 sm:p-6">
+<div class="pointer-events-none absolute inset-y-4 left-0 z-10 w-8 rounded-l-3xl bg-gradient-to-r from-white to-transparent sm:w-12"></div>
+<div class="pointer-events-none absolute inset-y-4 right-0 z-10 w-8 rounded-r-3xl bg-gradient-to-l from-white to-transparent sm:w-12"></div>
+<div id="evt-calendar-track" class="calendar-strip no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto px-1 pb-2 sm:gap-4 sm:px-2">
+<div class="snap-center shrink-0 flex h-36 w-[5.5rem] flex-col items-center justify-center rounded-2xl border border-outline/10 bg-white shadow-md transition hover:border-secondary/40 hover:shadow-lg sm:h-40 sm:w-24">
+<span class="text-label-sm font-bold text-on-surface-variant">Lun</span>
+<span class="text-headline-lg font-bold text-primary">09</span>
+</div>
+<div class="snap-center shrink-0 flex h-36 w-[5.5rem] flex-col items-center justify-center rounded-2xl border border-outline/10 bg-white shadow-md transition hover:border-secondary/40 hover:shadow-lg sm:h-40 sm:w-24">
+<span class="text-label-sm font-bold text-on-surface-variant">Mar</span>
+<span class="text-headline-lg font-bold text-primary">10</span>
+</div>
+<div class="snap-center shrink-0 flex h-36 w-[5.5rem] flex-col items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500 to-amber-700 text-white shadow-xl ring-2 ring-amber-400/50 sm:h-40 sm:w-24">
+<span class="text-label-sm font-bold opacity-90">Mer</span>
+<span class="text-headline-lg font-bold">11</span>
+</div>
+<div class="snap-center shrink-0 flex h-36 w-[5.5rem] flex-col items-center justify-center rounded-2xl border border-outline/10 bg-white shadow-md transition hover:border-secondary/40 hover:shadow-lg sm:h-40 sm:w-24">
+<span class="text-label-sm font-bold text-on-surface-variant">Jeu</span>
+<span class="text-headline-lg font-bold text-primary">12</span>
+</div>
+<div class="snap-center shrink-0 flex h-36 w-[5.5rem] flex-col items-center justify-center rounded-2xl border border-outline/10 bg-white shadow-md transition hover:border-secondary/40 hover:shadow-lg sm:h-40 sm:w-24">
+<span class="text-label-sm font-bold text-on-surface-variant">Ven</span>
+<span class="text-headline-lg font-bold text-primary">13</span>
+</div>
+<div class="snap-center shrink-0 flex h-36 w-[5.5rem] flex-col items-center justify-center rounded-2xl border border-outline/10 bg-white shadow-md transition hover:border-secondary/40 hover:shadow-lg sm:h-40 sm:w-24">
+<span class="text-label-sm font-bold text-on-surface-variant">Sam</span>
+<span class="text-headline-lg font-bold text-primary">14</span>
+</div>
+<div class="snap-center shrink-0 flex h-36 w-[5.5rem] flex-col items-center justify-center rounded-2xl border border-outline/10 bg-white shadow-md transition hover:border-secondary/40 hover:shadow-lg sm:h-40 sm:w-24">
+<span class="text-label-sm font-bold text-on-surface-variant">Dim</span>
+<span class="text-headline-lg font-bold text-primary">15</span>
+</div>
+</div>
+<p class="mt-3 text-center text-xs text-on-surface-variant sm:hidden">Faites défiler pour voir toute la semaine.</p>
+</div>
+</section>
+<!-- Advanced Filtering -->
+<section class="bg-surface-container-low py-12">
+<div class="px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-wrap gap-3">
+<button class="px-8 py-3 rounded-full bg-primary text-on-primary font-title-md text-body-md transition-all">Tous</button>
+<button class="px-8 py-3 rounded-full bg-white border border-outline/10 hover:border-tertiary text-on-surface-variant font-title-md text-body-md transition-all">Culture</button>
+<button class="px-8 py-3 rounded-full bg-white border border-outline/10 hover:border-tertiary text-on-surface-variant font-title-md text-body-md transition-all">Sport</button>
+<button class="px-8 py-3 rounded-full bg-white border border-outline/10 hover:border-tertiary text-on-surface-variant font-title-md text-body-md transition-all">Civique</button>
+<button class="px-8 py-3 rounded-full bg-white border border-outline/10 hover:border-tertiary text-on-surface-variant font-title-md text-body-md transition-all">Festivals</button>
+</div>
+<div class="w-full md:w-auto flex-1 max-w-md relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-tertiary">tune</span>
+<input class="w-full pl-12 pr-6 py-4 rounded-full border-none bg-white shadow-inner font-body-md focus:ring-2 focus:ring-tertiary/20" placeholder="Filtrer par nom ou mot-clé..." type="text"/>
+</div>
+</div>
+</section>
+<!-- Events Grid -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="glass-card group flex flex-col rounded-[32px] overflow-hidden bg-white shadow-sm transition-all">
+<div class="relative h-64 overflow-hidden">
+<img alt="Marathon de la Paix" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="An action-oriented, professional sports photograph of marathon runners in Lomé. The image has a high-end editorial feel with dynamic motion blur. The setting is a clean, modern palm-lined coastal road with a bright morning sun casting long, soft shadows. The lighting is warm and golden, maintaining the luxury aesthetic of the portal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb5-N8yBXv5sobvLFFpOzMZYsQyPuB15WIKnLSAQdaStI01GAUL-LccGep184k7DBBYrSeSW49oNaj-bfzbd4ZIhXZOTpYIn4HoKz3EiEHY4-n-XRQh0o-eW8fK34n-CJKniMqOCSga0FrJxIdCN7dQhVpnm2xa7UNENEXiXRDSpo8FWSmmOwh5bXJj2E3SbhssZI-kCygnpFvK7J_TzPRpxHNCurHrPNGc29Inru4464HYuJl-gs0wrqkIFzwtXPqeRiwBvivaA"/>
+<div class="absolute top-4 left-4">
+<span class="px-4 py-1 bg-secondary text-white rounded-full text-label-sm uppercase font-bold tracking-widest">Sport</span>
+</div>
+</div>
+<div class="p-8 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-lg text-title-md text-primary">Marathon de la Paix</h3>
+<span class="material-symbols-outlined text-tertiary" data-weight="fill">favorite</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-on-surface-variant text-body-md">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+                                22 Décembre 2024
+                            </div>
+<div class="flex items-center gap-2 text-on-surface-variant text-body-md">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                Front de Mer, Lomé
+                            </div>
+</div>
+<button class="w-full py-4 rounded-2xl border border-primary text-primary font-title-md text-body-md hover:bg-primary hover:text-white transition-all group-hover:shadow-lg">
+                            Voir Détails
+                        </button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-card group flex flex-col rounded-[32px] overflow-hidden bg-white shadow-sm transition-all">
+<div class="relative h-64 overflow-hidden">
+<img alt="Forum Économique" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A sophisticated business setting inside a futuristic glass-walled conference center in Lomé. Professionals in elegant attire are networking in a brightly lit, high-ceilinged hall. Soft afternoon light filters through structural geometric glass patterns. The mood is one of corporate excellence and high-level municipal governance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVTI5kAqsGns853RXiA6TS2HJYh0QHm_NPnxKPar3MmrznQ_dzomGP4hU_vfQl5Rxo4ydiJCZjJB0U8RP9HSzfm1Ll-oyYImF4saL1fv8YMkFdadncJVXPdABEfqcWzAHCEcfkvpJZE89tP40TFzbuu-9TKdWKjYJylQCN7ORhalpcOqJUQeQNGp8vuWVIlqN5ecGZ8DRn8FWmCbFQmXqeMbZjWzi_Pod9x4-QRFGAolpVwWnKkgZgZXZj_YxPUCaiUi-pe8hNBw"/>
+<div class="absolute top-4 left-4">
+<span class="px-4 py-1 bg-primary text-white rounded-full text-label-sm uppercase font-bold tracking-widest">Civique</span>
+</div>
+</div>
+<div class="p-8 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-lg text-title-md text-primary">Forum Économique</h3>
+<span class="material-symbols-outlined text-tertiary">favorite</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-on-surface-variant text-body-md">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+                                05 Janvier 2025
+                            </div>
+<div class="flex items-center gap-2 text-on-surface-variant text-body-md">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                Hôtel 2 Février
+                            </div>
+</div>
+<button class="w-full py-4 rounded-2xl border border-primary text-primary font-title-md text-body-md hover:bg-primary hover:text-white transition-all group-hover:shadow-lg">
+                            Voir Détails
+                        </button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-card group flex flex-col rounded-[32px] overflow-hidden bg-white shadow-sm transition-all">
+<div class="relative h-64 overflow-hidden">
+<img alt="Nuit de l'Élégance" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="An artistic high-fashion photograph showcasing elegant West African textiles in a luxury gala setting. A spotlight illuminates a designer's creation against a dark, minimalist architectural background. The color palette is rich with gold accents and deep blues. The lighting is cinematic and high-contrast, creating an atmosphere of exclusivity and cultural excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKhTKeDPaZ8KVx7Xdzt8BHeqQLSzE4nDR7Ge2_rGdLqlM2yeT6Iqb5BeCj-HP3xIM00e-00DM9vUBlcrVdudBjOJYU--w4Auue1p6I4FXc3uoYcpoxRan13s2iDxJzZhqojLF_2NCVnvty2nm9LzP5xp33GQWvmoSkf11an5ZN-Dc_u5Xq-Bpnf0gPuxikIZh4SfC3bvOcorjl_s9XF2K4uH6JhnCJBddf2a8OC6jEeNKdhrJCnB6fqE0lDudr7BK_-k2x5IFOIw"/>
+<div class="absolute top-4 left-4">
+<span class="px-4 py-1 bg-tertiary-container text-on-tertiary-container rounded-full text-label-sm uppercase font-bold tracking-widest">Culture</span>
+</div>
+</div>
+<div class="p-8 space-y-4">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-lg text-title-md text-primary">Nuit de l'Élégance</h3>
+<span class="material-symbols-outlined text-tertiary">favorite</span>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-2 text-on-surface-variant text-body-md">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+                                28 Décembre 2024
+                            </div>
+<div class="flex items-center gap-2 text-on-surface-variant text-body-md">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                Centre Culturel Français
+                            </div>
+</div>
+<button class="w-full py-4 rounded-2xl border border-primary text-primary font-title-md text-body-md hover:bg-primary hover:text-white transition-all group-hover:shadow-lg">
+                            Voir Détails
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Integration -->
+<section class="py-32 px-margin-desktop bg-primary text-on-primary overflow-hidden relative">
+<!-- Decorative Element -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-tertiary/10 blur-[120px] rounded-full"></div>
+<div class="max-w-container-max mx-auto flex flex-col lg:flex-row items-center gap-16 relative z-10">
+<div class="lg:w-1/2 space-y-6">
+<h2 class="font-display-lg text-display-lg">Ne manquez aucun moment fort.</h2>
+<p class="text-on-primary/70 font-body-lg max-w-lg">Recevez des alertes personnalisées pour les festivals, compétitions sportives et événements civiques de la capitale.</p>
+</div>
+<div class="lg:w-1/2 w-full">
+<form class="flex flex-col sm:flex-row gap-4">
+<input class="flex-1 px-8 py-5 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:ring-2 focus:ring-tertiary outline-none backdrop-blur-md" placeholder="votre@email.com" type="email"/>
+<button class="gold-gradient px-10 py-5 rounded-full font-title-md text-body-lg hover:scale-105 transition-transform whitespace-nowrap">
+                            S'inscrire aux alertes
+                        </button>
+</form>
+<p class="mt-4 text-label-sm text-on-primary/40">En vous inscrivant, vous acceptez notre politique de confidentialité citoyenne.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (aligné accueil + image) -->
+<footer class="relative overflow-hidden text-white">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-br from-[#001847] via-[#002466] to-[#000818]"></div>
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80')] bg-cover bg-center opacity-5"></div>
+<div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 blur-[120px]"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 blur-[120px]"></div>
+</div>
+<div class="relative z-10 py-24">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-3 mb-6">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm">
+<img alt="Commune de Lomé — logo du portail" class="h-8 w-8 object-contain" height="32" src="assets/logo-mairie.svg" width="32"/>
+</div>
+<span class="font-title-md text-title-md text-white font-bold uppercase tracking-tight">Commune de Lomé</span>
+</div>
+<p class="text-blue-200/80 font-body-md max-w-sm">La capitale du Togo, carrefour d'innovation et gardienne de l'excellence culturelle en Afrique de l'Ouest.</p>
+</div>
+<div>
+<h4 class="font-title-md text-title-md mb-6 text-white font-semibold">Liens Utiles</h4>
+<nav class="flex flex-col gap-3 text-sm text-blue-200/70">
+<a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="plan-du-site.html#mentions-legales"><span class="material-symbols-outlined text-base">arrow_right</span>Mentions Légales</a>
+<a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="contact.html"><span class="material-symbols-outlined text-base">arrow_right</span>Contact</a>
+<a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="actualites.html"><span class="material-symbols-outlined text-base">arrow_right</span>Transparence</a>
+</nav>
+</div>
+<div>
+<h4 class="font-title-md text-title-md mb-6 text-white font-semibold">Ressources</h4>
+<nav class="flex flex-col gap-3 text-sm text-blue-200/70">
+<a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="actualites.html"><span class="material-symbols-outlined text-base">arrow_right</span>Archives</a>
+</nav>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/10 gap-gutter">
+<p class="font-body-md text-body-md text-blue-200/50 text-center md:text-left">© 2024 Commune de Lomé - Excellence &amp; Innovation au service du Citoyen.</p>
+<div class="flex gap-3">
+<a class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110" href="mailto:contact@lome.tg" aria-label="Email">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110" href="https://lome.tg" rel="noopener noreferrer" target="_blank" aria-label="Site web">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110" href="tel:+22822210000" aria-label="Téléphone">
+<span class="material-symbols-outlined text-lg">call</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+(function () {
+  var track = document.getElementById('evt-calendar-track');
+  var prev = document.getElementById('evt-cal-prev');
+  var next = document.getElementById('evt-cal-next');
+  if (!track || !prev || !next) return;
+  function step() {
+    var cell = track.querySelector('.snap-center');
+    if (!cell) return 112;
+    var styles = window.getComputedStyle(track);
+    var gap = parseFloat(styles.columnGap || styles.gap) || 12;
+    return cell.getBoundingClientRect().width + gap;
+  }
+  prev.addEventListener('click', function () {
+    track.scrollBy({ left: -step(), behavior: 'smooth' });
+  });
+  next.addEventListener('click', function () {
+    track.scrollBy({ left: step(), behavior: 'smooth' });
+  });
+})();
+</script>
+</body></html>

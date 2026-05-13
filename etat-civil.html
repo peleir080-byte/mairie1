@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>État civil - Commune de Lomé</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#b1c5ff",
+                    "surface-bright": "#f9f9f9",
+                    "on-primary-container": "#848388",
+                    "on-secondary-container": "#fefcff",
+                    "surface-variant": "#e2e2e2",
+                    "on-primary-fixed-variant": "#47464b",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "background": "#f9f9f9",
+                    "surface-container-low": "#f3f3f3",
+                    "secondary-fixed": "#dae2ff",
+                    "outline-variant": "#c8c5cb",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-surface-variant": "#47464b",
+                    "surface-tint": "#5f5e62",
+                    "secondary": "#0054cb",
+                    "primary": "#000000",
+                    "on-secondary-fixed": "#001847",
+                    "tertiary": "#735c00",
+                    "on-tertiary-fixed": "#241a00",
+                    "on-surface": "#1a1c1c",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#316ee8",
+                    "primary-container": "#1b1b1f",
+                    "surface-container-high": "#e8e8e8",
+                    "surface": "#f9f9f9",
+                    "on-background": "#1a1c1c",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#0040a0",
+                    "inverse-surface": "#2f3131",
+                    "outline": "#78767b",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "surface-container": "#eeeeee",
+                    "on-tertiary-container": "#4f3e00",
+                    "primary-fixed-dim": "#c8c5cb",
+                    "on-primary-fixed": "#1b1b1f",
+                    "surface-dim": "#dadada",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "inverse-on-surface": "#f0f1f1",
+                    "tertiary-container": "#cca730",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#c8c5cb",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#ffe088",
+                    "primary-fixed": "#e4e1e7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "80px",
+                    "margin-tablet": "40px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "container-max": "1440px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Montserrat"],
+                    "label-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "title-md": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "title-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(0, 84, 203, 0.3);
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(26, 28, 28, 0.4), rgba(26, 28, 28, 0.1)), url('https://images.unsplash.com/photo-1596422846543-75c6fc18a594?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/20">
+<div class="flex justify-between items-center px-margin-desktop h-20 max-w-container-max mx-auto">
+<div class="flex items-center gap-4 min-w-0">
+<a class="flex items-center gap-3 shrink-0 min-w-0" href="index.html">
+<img alt="Commune de Lomé — logo du portail" class="h-11 w-11 shrink-0 object-contain" height="44" src="assets/logo-mairie.svg" width="44"/>
+<span class="text-title-md font-title-md font-bold text-on-secondary-fixed truncate sm:whitespace-nowrap">Commune de Lomé</span>
+</a>
+</div>
+<nav class="hidden md:flex flex-nowrap items-center gap-8 lg:gap-10 shrink-0">
+<a class="text-on-surface-variant hover:text-secondary font-label-sm text-label-sm transition-all duration-300 whitespace-nowrap" href="index.html">Accueil</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-sm text-label-sm whitespace-nowrap" href="services.html">Citoyenneté</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-sm text-label-sm transition-all duration-300 whitespace-nowrap" href="urbanisme.html">Urbanisme</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-sm text-label-sm transition-all duration-300 whitespace-nowrap" href="fiscalite.html">Fiscalité</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-sm text-label-sm transition-all duration-300 whitespace-nowrap" href="actualites.html">Actualités</a>
+</nav>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-sm text-label-sm transition-transform hover:scale-102 inline-flex items-center justify-center" href="espace-citoyen.html">
+                E-Services
+            </a>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[380px] md:min-h-[480px] lg:h-[520px] flex items-center justify-center text-center px-6 sm:px-10 lg:px-margin-desktop overflow-hidden">
+<div class="absolute inset-0 z-0 bg-primary-container">
+<img class="w-full h-full object-cover opacity-60 grayscale-[30%]" data-alt="A majestic and modern architectural view of a governmental building at sunset, featuring clean glass lines and elegant stone facades. The lighting is warm and golden, casting soft shadows that emphasize the high-end minimalist design. The atmosphere is serene and prestigious, conveying a sense of futuristic trust and world-class administrative excellence in an urban setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOpdC1dkNWukb-XniHLDE9c4IJew1xYWorUxFZy51Q7XutbTN6IOr9HZotbypKDrw1LjC5XLbrW0N3RVMO7_P9leQfxirFdj0mx5BEGcoQ5yk7-YcywpIndI77IBUicquUvBshCggdd-rRsfR7Gt_gr9s7KOo9p0Ma-_pPm2MIpPZjDK5x1FB28BY6ZyApZGIj8p7ZDVCMiy0nayXo18DWX56e5bZiN6GkYe8iw3j7ChGgmsXRSClRVt12xXGgcTWKHZMJuSMcYg"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-background"></div>
+</div>
+<div class="relative z-10 max-w-5xl mx-auto px-2">
+<h2 class="font-display-lg text-display-lg text-white mb-6">État Civil</h2>
+<p class="font-body-lg text-body-lg text-white/90 max-w-3xl mx-auto backdrop-blur-sm bg-black/10 p-5 sm:p-6 rounded-xl">
+                    Nous modernisons vos démarches administratives. Accédez en quelques clics à vos actes officiels avec la rigueur et l'élégance du service public de Lomé.
+                </p>
+</div>
+</section>
+<!-- Service Selection Bento Grid -->
+<section class="py-16 md:py-20 px-margin-desktop max-w-container-max mx-auto -mt-24 md:-mt-32 relative z-20">
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-gutter">
+<!-- Acte de Naissance -->
+<div class="glass-card p-8 rounded-[24px] flex flex-col justify-between min-h-[280px] md:min-h-[300px] h-auto md:h-80">
+<div>
+<div class="w-14 h-14 bg-secondary-fixed rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="child_care">child_care</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-secondary-fixed mb-2">Acte de Naissance</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Déclaration et demande de copie intégrale ou d'extrait.</p>
+</div>
+<a class="flex items-center justify-center gap-2 w-full py-4 bg-primary text-white rounded-xl font-label-sm hover:bg-secondary transition-colors" href="espace-citoyen.html">
+                        Démarrer la demande
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Acte de Mariage -->
+<div class="glass-card p-8 rounded-[24px] flex flex-col justify-between min-h-[280px] md:min-h-[300px] h-auto md:h-80">
+<div>
+<div class="w-14 h-14 bg-tertiary-fixed rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="favorite">favorite</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-secondary-fixed mb-2">Acte de Mariage</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Formalités de célébration et copies certifiées.</p>
+</div>
+<a class="flex items-center justify-center gap-2 w-full py-4 bg-primary text-white rounded-xl font-label-sm hover:bg-secondary transition-colors" href="espace-citoyen.html">
+                        Démarrer la demande
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Acte de Décès -->
+<div class="glass-card p-8 rounded-[24px] flex flex-col justify-between min-h-[280px] md:min-h-[300px] h-auto md:h-80">
+<div>
+<div class="w-14 h-14 bg-surface-container-highest rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-surface text-3xl" data-icon="soul">person_heart</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-secondary-fixed mb-2">Acte de Décès</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Déclaration simplifiée et obtention de certificats.</p>
+</div>
+<a class="flex items-center justify-center gap-2 w-full py-4 bg-primary text-white rounded-xl font-label-sm hover:bg-secondary transition-colors" href="espace-citoyen.html">
+                        Démarrer la demande
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Certificat de Résidence -->
+<div class="glass-card p-8 rounded-[24px] flex flex-col justify-between min-h-[280px] md:min-h-[300px] h-auto md:h-80">
+<div>
+<div class="w-14 h-14 bg-secondary-fixed-dim rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant text-3xl" data-icon="home_pin">home_pin</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-secondary-fixed mb-2">Résidence</h3>
+<p class="font-body-md text-on-surface-variant text-sm">Attestation de domicile pour vos démarches officielles.</p>
+</div>
+<a class="flex items-center justify-center gap-2 w-full py-4 bg-primary text-white rounded-xl font-label-sm hover:bg-secondary transition-colors" href="espace-citoyen.html">
+                        Démarrer la demande
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Tracking Section -->
+<section class="py-32 bg-surface-container-low px-margin-desktop">
+<div class="max-w-5xl mx-auto text-center px-4">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-4 block">Suivi en temps réel</span>
+<h2 class="font-headline-lg text-headline-lg mb-12">Où en est votre dossier ?</h2>
+<div class="relative max-w-5xl mx-auto">
+<div class="glass-card p-4 rounded-2xl sm:rounded-full flex flex-col sm:flex-row items-stretch sm:items-center gap-4 border-outline/20">
+<span class="material-symbols-outlined text-secondary sm:ml-6 shrink-0 self-center sm:self-auto" data-icon="search">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 font-body-md placeholder:text-outline-variant sm:flex-1 min-w-0 px-2" placeholder="Entrez votre numéro de référence (ex: LOM-2024-XXXX)" type="text"/>
+<button class="bg-secondary text-white px-8 py-4 rounded-xl sm:rounded-full font-label-sm transition-all hover:shadow-lg hover:bg-secondary-container shrink-0 w-full sm:w-auto">
+                            Suivre ma demande
+                        </button>
+</div>
+</div>
+<p class="mt-8 font-body-md text-on-surface-variant opacity-70 italic text-sm">
+                    Votre numéro de référence figure sur le récépissé remis lors de votre dépôt.
+                </p>
+</div>
+</section>
+<!-- Informational Section: Pièces à fournir -->
+<section class="py-20 md:py-28 px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-8">Pièces à fournir</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                        Préparez vos documents en amont pour garantir une validation rapide de votre demande par nos services municipaux.
+                    </p>
+<div class="space-y-4">
+<!-- Accordion Item 1 -->
+<details class="group bg-white rounded-2xl border border-outline-variant/30 overflow-hidden" open="">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-title-md text-title-md text-on-secondary-fixed flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="verified">verified</span>
+                                    Acte de Naissance
+                                </span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 pt-2 font-body-md text-on-surface-variant border-t border-outline-variant/10">
+<ul class="space-y-3 list-disc pl-5">
+<li>Copie de la déclaration de naissance originale</li>
+<li>Pièce d'identité de l'un des parents (CNI ou Passeport)</li>
+<li>Livret de famille (si disponible)</li>
+<li>Timbre fiscal de 500 FCFA</li>
+</ul>
+</div>
+</details>
+<!-- Accordion Item 2 -->
+<details class="group bg-white rounded-2xl border border-outline-variant/30 overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-title-md text-title-md text-on-secondary-fixed flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="verified">verified</span>
+                                    Certificat de Résidence
+                                </span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 pt-2 font-body-md text-on-surface-variant border-t border-outline-variant/10">
+<ul class="space-y-3 list-disc pl-5">
+<li>Facture CEET ou TDE récente (moins de 3 mois)</li>
+<li>Pièce d'identité en cours de validité</li>
+<li>Deux photos d'identité récentes</li>
+<li>Témoignage du Chef de Quartier</li>
+</ul>
+</div>
+</details>
+<!-- Accordion Item 3 -->
+<details class="group bg-white rounded-2xl border border-outline-variant/30 overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-title-md text-title-md text-on-secondary-fixed flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="verified">verified</span>
+                                    Acte de Mariage
+                                </span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 pt-2 font-body-md text-on-surface-variant border-t border-outline-variant/10">
+<ul class="space-y-3 list-disc pl-5">
+<li>Certificats de célibat des futurs époux</li>
+<li>Extraits de naissance (moins de 3 mois)</li>
+<li>Copies de CNI des témoins</li>
+<li>Contrat de mariage (le cas échéant)</li>
+</ul>
+</div>
+</details>
+</div>
+</div>
+<div class="relative min-h-[320px] md:min-h-[440px] lg:min-h-[520px] rounded-[32px] overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A close-up shot of professional administrative hands handling high-quality official documents with a fountain pen on a polished dark wood desk. The lighting is focused and warm, highlighting the texture of the premium paper and the precision of the work. The background is a blurred office interior with soft emerald green accents, maintaining a minimalist and luxurious government aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXNeyVA6p3zP62ecvZNBWvYsjlZtqqS1XtfSMSfCtdzUKoC3XtAKAHCuftfqWEzZZXRjbfVjguHgeVhLsVZopkR-zXGgz_zr5euoOUcuCiEgNDrha3CoJWPAcd_HyCMMp6NurgTeNmFwAMTFu9yw2K07Zn9vHj4nsaDroXWVl9VCKVgInA62i6MF9Lh2wHprLnSV9m2fSLmCLrBmf-0NZdWdkDa5MmVt3VRgwGGJtsvf1mcU7wm7V3PYpai1Ab85uUkp5suHsynQ"/>
+<div class="absolute bottom-8 left-8 right-8 glass-card p-6 rounded-2xl border-white/40">
+<p class="font-title-md text-on-secondary-fixed mb-2">Une question ?</p>
+<p class="font-body-md text-on-surface-variant text-sm mb-4">Nos conseillers vous accompagnent du lundi au vendredi de 08h00 à 17h00.</p>
+<a class="text-secondary font-bold flex items-center gap-2" href="tel:112">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+                            Numéro Vert : 112
+                        </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="relative mt-20 overflow-hidden text-white">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-br from-[#001847] via-[#002466] to-[#000818]"></div>
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80')] bg-cover bg-center opacity-5"></div>
+<div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 blur-[120px]"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 blur-[120px]"></div>
+</div>
+<div class="relative z-10 py-24">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="flex items-center gap-3 mb-6">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm">
+<img alt="Commune de Lomé — logo du portail" class="h-8 w-8 object-contain" height="32" src="assets/logo-mairie.svg" width="32"/>
+</div>
+<span class="font-title-md text-title-md text-white font-bold">Commune de Lomé</span>
+</div>
+<p class="font-body-md text-blue-200/80">Excellence &amp; Tradition au service de la capitale togolaise.</p>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase mb-6 tracking-widest text-white font-semibold">Liens Rapides</h4>
+<ul class="space-y-3 text-sm text-blue-200/70">
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="contact.html"><span class="material-symbols-outlined text-base">arrow_right</span>Contact</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="plan-du-site.html#mentions-legales"><span class="material-symbols-outlined text-base">arrow_right</span>Mentions Légales</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase mb-6 tracking-widest text-white font-semibold">Services</h4>
+<ul class="space-y-3 text-sm text-blue-200/70">
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="plan-du-site.html#accessibilite"><span class="material-symbols-outlined text-base">arrow_right</span>Accessibilité</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-sm text-label-sm uppercase mb-6 tracking-widest text-white font-semibold">Suivez-nous</h4>
+<div class="flex gap-3">
+<a class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110" href="https://lome.tg" rel="noopener noreferrer" target="_blank" aria-label="Site web">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110" href="mailto:contact@lome.tg" aria-label="Email">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110" href="tel:+22822210000" aria-label="Téléphone">
+<span class="material-symbols-outlined text-lg">call</span>
+</a>
+</div>
+<p class="font-body-md text-xs text-blue-200/50">© 2024 Commune de Lomé - Tous droits réservés.</p>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contacter la Mairie — Commune de Lomé</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f9f9f9",
+                        "tertiary-container": "#cca730",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container": "#eeeeee",
+                        "on-primary-container": "#848388",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#c8c5cb",
+                        "outline-variant": "#c8c5cb",
+                        "on-secondary-fixed": "#001847",
+                        "on-secondary-container": "#fefcff",
+                        "secondary-container": "#316ee8",
+                        "primary-container": "#1b1b1f",
+                        "on-background": "#1a1c1c",
+                        "primary": "#000000",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-primary-fixed": "#1b1b1f",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#c8c5cb",
+                        "surface-container-high": "#e8e8e8",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "surface-tint": "#5f5e62",
+                        "on-surface-variant": "#47464b",
+                        "outline": "#78767b",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "on-primary-fixed-variant": "#47464b",
+                        "inverse-surface": "#2f3131",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary-fixed-variant": "#0040a0",
+                        "tertiary": "#735c00",
+                        "surface": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "secondary-fixed-dim": "#b1c5ff",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#e4e1e7",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#dadada",
+                        "secondary": "#0054cb",
+                        "on-tertiary-container": "#4f3e00",
+                        "tertiary-fixed": "#ffe088",
+                        "secondary-fixed": "#dae2ff",
+                        "on-primary": "#ffffff",
+                        "gold-accent": "#D4AF37",
+                        "emerald-accent": "#006A4E"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-tablet": "40px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "unit": "8px",
+                        "container-max": "1440px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "title-md": ["Montserrat"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "title-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.78);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+        }
+        .hero-contact-overlay {
+            background: linear-gradient(110deg, rgba(0, 24, 71, 0.22) 0%, rgba(0, 24, 71, 0.06) 42%, transparent 78%);
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background antialiased">
+<header class="fixed top-0 z-50 h-20 w-full border-b border-white/20 bg-white/70 backdrop-blur-xl dark:bg-primary-container/70">
+<div class="mx-auto flex h-full max-w-container-max items-center justify-between px-margin-desktop">
+<a class="flex shrink-0 items-center gap-3" href="index.html">
+<img alt="Commune de Lomé — logo du portail" class="h-11 w-11 shrink-0 object-contain" height="44" src="assets/logo-mairie.svg" width="44"/>
+<span class="whitespace-nowrap font-title-md text-title-md font-bold tracking-tight text-on-secondary-fixed dark:text-white">Commune de Lomé</span>
+</a>
+<nav class="hidden shrink-0 flex-nowrap items-center gap-8 md:flex lg:gap-10">
+<a class="whitespace-nowrap font-label-sm text-label-sm text-on-surface-variant transition-all duration-300 hover:text-secondary dark:text-outline-variant" href="index.html">Accueil</a>
+<a class="whitespace-nowrap font-label-sm text-label-sm text-on-surface-variant transition-all duration-300 hover:text-secondary dark:text-outline-variant" href="services.html">Citoyenneté</a>
+<a class="whitespace-nowrap font-label-sm text-label-sm text-on-surface-variant transition-all duration-300 hover:text-secondary dark:text-outline-variant" href="urbanisme.html">Urbanisme</a>
+<a class="whitespace-nowrap font-label-sm text-label-sm text-on-surface-variant transition-all duration-300 hover:text-secondary dark:text-outline-variant" href="fiscalite.html">Fiscalité</a>
+<a class="whitespace-nowrap font-label-sm text-label-sm text-on-surface-variant transition-all duration-300 hover:text-secondary dark:text-outline-variant" href="actualites.html">Actualités</a>
+<a class="whitespace-nowrap border-b-2 border-secondary pb-1 font-label-sm text-label-sm font-bold text-secondary dark:border-tertiary-fixed dark:text-tertiary-fixed" href="contact.html">Contact</a>
+</nav>
+<a class="inline-flex shrink-0 items-center justify-center rounded-full bg-on-secondary-fixed px-6 py-2 font-label-sm text-label-sm text-white shadow-lg transition-transform hover:scale-105" href="espace-citoyen.html">E-Services</a>
+</div>
+</header>
+
+<main class="pt-20">
+<!-- Hero -->
+<section class="relative flex min-h-[380px] items-center overflow-hidden md:min-h-[460px]">
+<div class="absolute inset-0 z-0">
+<img alt="Hôtel de ville et jardins de Lomé" class="h-full w-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf6Uu7VqbcZjcU1KncUaPe2jELbcVPzqsBkIijfCE-8BG_zeLzFBu7rkkNceTE9tv486y-pNkU_iHNmecAdCxUTVBOcFU7nJSm_5NUWpx8JyRiRs4EXvMdZEgpbcSlHmKWw7rIS3NMCkftgSdmwhwRn7uewBuGQRSgmMAPsMpH992f0kfjGAudxzun5B-Pooo4o6MtTIdAGmH6aKTrk-p9Bfs-dNaGMTyUKO78msLsXHsTrL_qBx5tFdZrxjJjBxNETrjLA7qHfQ"/>
+<div class="absolute inset-0 hero-contact-overlay"></div>
+</div>
+<div class="relative z-10 mx-auto w-full max-w-container-max px-margin-desktop py-14 md:py-20">
+<div class="max-w-2xl glass-panel rounded-[32px] p-8 text-on-primary shadow-2xl md:p-12">
+<span class="mb-4 inline-block rounded-full bg-tertiary-fixed px-3 py-1 font-label-sm text-label-sm font-bold uppercase tracking-wide text-on-tertiary-fixed">Relations citoyennes</span>
+<h1 class="mb-4 font-display-lg text-headline-lg-mobile text-on-secondary-fixed md:text-display-lg">Contacter la Mairie</h1>
+<p class="mb-8 font-body-lg text-body-lg leading-relaxed text-on-surface-variant">Accueil physique, permanences téléphoniques, courriels par service et prise de contact pour vos démarches. Pour les demandes en ligne, privilégiez l’Espace citoyen.</p>
+<div class="flex flex-wrap gap-3">
+<a class="inline-flex items-center gap-2 rounded-full bg-secondary-container px-5 py-2.5 font-label-sm text-label-sm font-semibold text-on-secondary-container transition-transform hover:scale-[1.02]" href="tel:+22822210000"><span class="material-symbols-outlined text-lg">call</span> +228 22 21 00 00</a>
+<a class="inline-flex items-center gap-2 rounded-full border-2 border-secondary px-5 py-2.5 font-label-sm text-label-sm font-semibold text-secondary transition-colors hover:bg-secondary hover:text-white" href="mailto:contact@lome.tg"><span class="material-symbols-outlined text-lg">mail</span> contact@lome.tg</a>
+<a class="inline-flex items-center gap-2 rounded-full border border-outline-variant bg-white/60 px-5 py-2.5 font-label-sm text-label-sm font-semibold text-on-secondary-fixed backdrop-blur-sm transition-colors hover:bg-surface-container-high" href="#carte"><span class="material-symbols-outlined text-lg">map</span> Plan d’accès</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Blocs principaux -->
+<section class="px-margin-desktop py-16 md:py-24">
+<div class="mx-auto max-w-container-max">
+<div class="mb-14 max-w-3xl">
+<h2 class="mb-3 font-headline-lg text-headline-lg text-on-secondary-fixed">Informations pratiques</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Horaires, guichets et canaux officiels de la Commune de Lomé. Les coordonnées ci-dessous sont indicatives pour une maquette de portail ; adaptez-les à votre service de communication.</p>
+</div>
+
+<div class="grid grid-cols-1 gap-gutter lg:grid-cols-2">
+<!-- Accueil -->
+<div class="rounded-3xl border border-outline-variant/25 bg-white p-8 shadow-sm md:p-10">
+<div class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary-fixed text-secondary">
+<span class="material-symbols-outlined text-2xl">location_on</span>
+</div>
+<h3 class="mb-4 font-title-md text-title-md text-on-secondary-fixed">Accueil du public</h3>
+<p class="font-body-md text-body-md leading-relaxed text-on-surface-variant"><strong class="text-on-surface">Hôtel de Ville</strong><br/>Avenue de la Mairie<br/>Lomé, Togo</p>
+<ul class="mt-6 space-y-3 border-t border-outline-variant/30 pt-6 font-body-md text-body-md text-on-surface-variant">
+<li class="flex gap-3"><span class="material-symbols-outlined shrink-0 text-gold-accent">accessible</span> Accès PMR : rampe côté cour d’honneur (signalétique sur place).</li>
+<li class="flex gap-3"><span class="material-symbols-outlined shrink-0 text-gold-accent">local_parking</span> Stationnement : courte durée devant l’accueil ; parkings publics à proximité du centre-ville.</li>
+<li class="flex gap-3"><span class="material-symbols-outlined shrink-0 text-gold-accent">schedule</span> Délai moyen d’attente aux guichets : variable selon les périodes ; venez en début de matinée en semaine.</li>
+</ul>
+</div>
+<!-- Horaires -->
+<div class="rounded-3xl border border-outline-variant/25 bg-white p-8 shadow-sm md:p-10">
+<div class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-tertiary-fixed text-tertiary">
+<span class="material-symbols-outlined text-2xl">calendar_month</span>
+</div>
+<h3 class="mb-6 font-title-md text-title-md text-on-secondary-fixed">Horaires d’ouverture</h3>
+<div class="space-y-0 divide-y divide-outline-variant/30 font-body-md text-body-md">
+<div class="flex justify-between gap-4 py-3"><span class="text-on-surface-variant">Lundi — jeudi</span><span class="font-semibold text-on-secondary-fixed">8h00 — 12h30 · 14h00 — 17h30</span></div>
+<div class="flex justify-between gap-4 py-3"><span class="text-on-surface-variant">Vendredi</span><span class="font-semibold text-on-secondary-fixed">8h00 — 12h30 · 14h00 — 16h30</span></div>
+<div class="flex justify-between gap-4 py-3"><span class="text-on-surface-variant">Samedi</span><span class="font-semibold text-on-secondary-fixed">8h00 — 12h00 <span class="block text-xs font-normal text-on-surface-variant">(état civil sur rendez-vous)</span></span></div>
+<div class="flex justify-between gap-4 py-3"><span class="text-on-surface-variant">Dimanche &amp; jours fériés</span><span class="font-semibold text-error">Fermé</span></div>
+</div>
+<p class="mt-6 rounded-xl bg-surface-container-low p-4 text-sm text-on-surface-variant">Les guichets spécialisés (urbanisme, finances) peuvent appliquer des créneaux différents : renseignez-vous avant de vous déplacer.</p>
+</div>
+</div>
+
+<!-- Guichets -->
+<div class="mt-gutter">
+<h3 class="mb-8 font-headline-lg text-headline-lg text-on-secondary-fixed">Guichets et services</h3>
+<div class="grid grid-cols-1 gap-gutter md:grid-cols-3">
+<div class="flex flex-col rounded-3xl border border-outline-variant/20 bg-white p-8 shadow-sm transition-shadow hover:shadow-md">
+<div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-secondary-fixed text-secondary"><span class="material-symbols-outlined">badge</span></div>
+<h4 class="mb-2 font-title-md text-title-md text-on-secondary-fixed">État civil</h4>
+<p class="mb-6 flex-grow font-body-md text-body-md text-on-surface-variant">Actes de naissance, mariage, décès ; légalisations et copies sur place sur rendez-vous.</p>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-secondary hover:underline" href="services.html">Voir la page Citoyenneté <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="flex flex-col rounded-3xl border border-outline-variant/20 bg-white p-8 shadow-sm transition-shadow hover:shadow-md">
+<div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-secondary-fixed text-secondary"><span class="material-symbols-outlined">domain</span></div>
+<h4 class="mb-2 font-title-md text-title-md text-on-secondary-fixed">Urbanisme &amp; voirie</h4>
+<p class="mb-6 flex-grow font-body-md text-body-md text-on-surface-variant">Permis de construire, renseignements cadastraux, signalement d’incivilités sur l’espace public.</p>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-secondary hover:underline" href="urbanisme.html">Urbanisme <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="flex flex-col rounded-3xl border border-outline-variant/20 bg-white p-8 shadow-sm transition-shadow hover:shadow-md">
+<div class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-secondary-fixed text-secondary"><span class="material-symbols-outlined">account_balance</span></div>
+<h4 class="mb-2 font-title-md text-title-md text-on-secondary-fixed">Finances locales</h4>
+<p class="mb-6 flex-grow font-body-md text-body-md text-on-surface-variant">Taxes communales, quittances, échéanciers et accompagnement aux démarches fiscales.</p>
+<a class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-secondary hover:underline" href="fiscalite.html">Fiscalité <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+
+<!-- Urgence -->
+<div class="mt-gutter rounded-3xl border border-error/25 bg-error-container/40 p-8 md:flex md:items-start md:gap-6 md:p-10">
+<span class="material-symbols-outlined mb-4 block text-3xl text-error md:mb-0">emergency_home</span>
+<div>
+<h3 class="mb-2 font-title-md text-title-md text-on-error-container">Urgences sur la voie publique</h3>
+<p class="font-body-md text-body-md leading-relaxed text-on-surface">Pour un danger immédiat (incendie, accident grave, violence), composez les <strong>numéros nationaux d’urgence</strong>. La mairie n’est pas un centre d’appel d’urgence 24h/24.</p>
+<p class="mt-4 font-body-md text-body-md text-on-surface-variant">Pour les signalements municipaux hors urgence vitale (nid-de-poule, éclairage public, déchets), privilégiez le standard en heures d’ouverture ou le formulaire ci-dessous.</p>
+</div>
+</div>
+
+<!-- Formulaire + numéros -->
+<div class="mt-gutter grid grid-cols-1 gap-gutter lg:grid-cols-5">
+<div class="lg:col-span-3">
+<div class="rounded-3xl border border-outline-variant/25 bg-white p-8 shadow-sm md:p-10">
+<h3 class="mb-2 font-title-md text-title-md text-on-secondary-fixed">Écrire à la mairie</h3>
+<p class="mb-8 font-body-md text-body-md text-on-surface-variant">Formulaire de démonstration (site statique). En production, reliez ce bloc à votre outil de gestion des courriers ou à une adresse de contact sécurisée.</p>
+<form action="#" class="space-y-5" method="get">
+<div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+<label class="block"><span class="mb-1.5 block font-label-sm text-label-sm uppercase tracking-wide text-on-surface-variant">Nom</span><input class="mt-0 block w-full rounded-xl border-outline-variant/40 shadow-sm focus:border-secondary focus:ring-secondary" name="nom" placeholder="Votre nom" type="text"/></label>
+<label class="block"><span class="mb-1.5 block font-label-sm text-label-sm uppercase tracking-wide text-on-surface-variant">Courriel</span><input class="mt-0 block w-full rounded-xl border-outline-variant/40 shadow-sm focus:border-secondary focus:ring-secondary" name="email" placeholder="vous@exemple.tg" type="email"/></label>
+</div>
+<label class="block"><span class="mb-1.5 block font-label-sm text-label-sm uppercase tracking-wide text-on-surface-variant">Sujet</span><select class="mt-0 block w-full rounded-xl border-outline-variant/40 shadow-sm focus:border-secondary focus:ring-secondary" name="sujet">
+<option>État civil</option>
+<option>Urbanisme &amp; permis</option>
+<option>Fiscalité &amp; taxes</option>
+<option>Autre demande</option>
+</select></label>
+<label class="block"><span class="mb-1.5 block font-label-sm text-label-sm uppercase tracking-wide text-on-surface-variant">Message</span><textarea class="mt-0 block w-full rounded-xl border-outline-variant/40 shadow-sm focus:border-secondary focus:ring-secondary" name="message" placeholder="Décrivez votre demande en quelques lignes…" rows="5"></textarea></label>
+<p class="text-xs text-on-surface-variant">En cliquant sur « Envoyer », aucun message n’est transmis sur ce site de démonstration. Utilisez <a class="font-semibold text-secondary hover:underline" href="mailto:contact@lome.tg">contact@lome.tg</a> pour un envoi réel.</p>
+<button class="w-full rounded-xl bg-on-secondary-fixed py-4 font-label-sm text-label-sm font-bold text-white transition-transform hover:scale-[1.01] sm:w-auto sm:px-10" type="button">Envoyer (démo)</button>
+</form>
+</div>
+</div>
+<div class="lg:col-span-2 space-y-gutter">
+<div class="rounded-3xl border border-outline-variant/25 bg-on-secondary-fixed p-8 text-white shadow-sm">
+<h3 class="mb-6 font-title-md text-title-md text-tertiary-fixed">Numéros utiles</h3>
+<ul class="space-y-5 font-body-md text-body-md">
+<li class="flex justify-between gap-4 border-b border-white/15 pb-4"><span class="text-white/85">Standard mairie</span><a class="shrink-0 font-semibold text-tertiary-fixed hover:underline" href="tel:+22822210000">22 21 00 00</a></li>
+<li class="flex justify-between gap-4 border-b border-white/15 pb-4"><span class="text-white/85">État civil (permanence)</span><span class="shrink-0 font-semibold text-white/95">22 21 00 10</span></li>
+<li class="flex justify-between gap-4 border-b border-white/15 pb-4"><span class="text-white/85">Urbanisme</span><span class="shrink-0 font-semibold text-white/95">22 21 00 20</span></li>
+<li class="flex justify-between gap-4"><span class="text-white/85">Finances</span><span class="shrink-0 font-semibold text-white/95">22 21 00 30</span></li>
+</ul>
+<p class="mt-6 text-sm text-white/70">Numéros fictifs pour maquette — remplacez par vos lignes officielles.</p>
+</div>
+<div class="rounded-3xl border border-outline-variant/25 bg-surface-container-low p-8">
+<h4 class="mb-3 font-title-md text-title-md text-on-secondary-fixed">Démarches en ligne</h4>
+<p class="mb-4 font-body-md text-body-md text-on-surface-variant">Suivi de dossier, demandes d’actes, paiements : tout passe par le portail sécurisé.</p>
+<a class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-secondary-container py-3.5 font-label-sm text-label-sm font-bold text-on-secondary-container transition-transform hover:scale-[1.02]" href="espace-citoyen.html"><span class="material-symbols-outlined">login</span> Ouvrir l’Espace citoyen</a>
+</div>
+</div>
+</div>
+
+<!-- Carte -->
+<div class="mt-gutter scroll-mt-28" id="carte">
+<h3 class="mb-4 font-headline-lg text-headline-lg text-on-secondary-fixed">Nous trouver</h3>
+<p class="mb-6 max-w-2xl font-body-md text-body-md text-on-surface-variant">Repère approximatif du centre administratif sur la carte collaborative OpenStreetMap.</p>
+<div class="overflow-hidden rounded-3xl border border-outline-variant/30 shadow-md">
+<div class="relative aspect-[16/9] min-h-[280px] w-full md:aspect-[21/9] md:min-h-[320px]">
+<iframe allowfullscreen="" class="absolute inset-0 h-full w-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=1.165%2C6.085%2C1.275%2C6.195&amp;layer=mapnik&amp;marker=6.1319%2C1.2228" title="Carte de Lomé (OpenStreetMap)"></iframe>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-4 border-t border-outline-variant/20 bg-white px-6 py-4">
+<a class="font-label-sm text-label-sm font-semibold text-secondary hover:underline" href="https://www.openstreetmap.org/?mlat=6.13194&amp;mlon=1.22278#map=13/6.13194/1.22278" rel="noopener noreferrer" target="_blank">Ouvrir sur OpenStreetMap</a>
+<span class="text-xs text-on-surface-variant">Données © les contributeurs OpenStreetMap</span>
+</div>
+</div>
+</div>
+
+<!-- FAQ -->
+<div class="mx-auto mt-gutter max-w-container-max pb-16">
+<h3 class="mb-6 font-headline-lg text-headline-lg text-on-secondary-fixed">Questions fréquentes</h3>
+<div class="max-w-3xl space-y-3">
+<details class="group rounded-2xl border border-outline-variant/25 bg-white px-6 py-4 shadow-sm open:shadow-md">
+<summary class="cursor-pointer list-none font-title-md text-title-md text-on-secondary-fixed marker:content-none [&amp;::-webkit-details-marker]:hidden">Dois-je prendre rendez-vous ?<span class="material-symbols-outlined float-right text-on-surface-variant transition-transform group-open:rotate-180">expand_more</span></summary>
+<p class="mt-4 border-t border-outline-variant/20 pt-4 font-body-md text-body-md text-on-surface-variant">Certaines démarches (état civil, entretien avec un chef de service) se font sur rendez-vous. Pour une simple orientation, l’accueil général reçoit en général sans RDV aux horaires d’ouverture.</p>
+</details>
+<details class="group rounded-2xl border border-outline-variant/25 bg-white px-6 py-4 shadow-sm open:shadow-md">
+<summary class="cursor-pointer list-none font-title-md text-title-md text-on-secondary-fixed marker:content-none [&amp;::-webkit-details-marker]:hidden">Puis-joindre un service par courriel ?<span class="material-symbols-outlined float-right text-on-surface-variant transition-transform group-open:rotate-180">expand_more</span></summary>
+<p class="mt-4 border-t border-outline-variant/20 pt-4 font-body-md text-body-md text-on-surface-variant">L’adresse générale <strong>contact@lome.tg</strong> centralise les messages ; vous pouvez préciser le service dans l’objet. Les demandes urgentes ou complexes sont souvent plus rapides à traiter par téléphone ou en guichet.</p>
+</details>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="relative w-full overflow-hidden text-white">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-br from-[#001847] via-[#002466] to-[#000818]"></div>
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80')] bg-cover bg-center opacity-5"></div>
+<div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 blur-[120px]"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 blur-[120px]"></div>
+</div>
+<div class="relative z-10 py-24">
+<div class="mx-auto grid max-w-container-max grid-cols-1 gap-12 px-margin-desktop md:grid-cols-4">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm">
+<img alt="Commune de Lomé — logo du portail" class="h-8 w-8 object-contain" height="32" src="assets/logo-mairie.svg" width="32"/>
+</div>
+<span class="font-title-md text-title-md text-white font-bold">Commune de Lomé</span>
+</div>
+<p class="font-body-md text-body-md text-blue-200/80">L'excellence au service du citoyen. Pour toute question, l'accueil et ce portail sont à votre disposition.</p>
+<div class="flex gap-3">
+<a class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110" href="https://lome.tg" rel="noopener noreferrer" target="_blank" aria-label="Site web">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110" href="mailto:contact@lome.tg" aria-label="Email">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110" href="tel:+22822210000" aria-label="Téléphone">
+<span class="material-symbols-outlined text-lg">call</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="mb-6 font-title-md text-title-md text-white font-semibold">Services</h5>
+<ul class="space-y-3 text-sm text-blue-200/70">
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="services.html"><span class="material-symbols-outlined text-base">arrow_right</span>Citoyenneté</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="urbanisme.html"><span class="material-symbols-outlined text-base">arrow_right</span>Urbanisme</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="fiscalite.html"><span class="material-symbols-outlined text-base">arrow_right</span>Fiscalité</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="espace-citoyen.html"><span class="material-symbols-outlined text-base">arrow_right</span>E-Services</a></li>
+</ul>
+</div>
+<div>
+<h5 class="mb-6 font-title-md text-title-md text-white font-semibold">Institution</h5>
+<ul class="space-y-3 text-sm text-blue-200/70">
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="mairie.html"><span class="material-symbols-outlined text-base">arrow_right</span>La Mairie</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="actualites.html"><span class="material-symbols-outlined text-base">arrow_right</span>Actualités</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="contact.html"><span class="material-symbols-outlined text-base">arrow_right</span>Contact</a></li>
+</ul>
+</div>
+<div>
+<h5 class="mb-6 font-title-md text-title-md text-white font-semibold">Accès rapide</h5>
+<div class="space-y-4 text-sm text-blue-200/70">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-blue-400 mt-0.5">location_on</span>
+<p>Hôtel de Ville, Avenue de la Mairie, Lomé</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-400">call</span>
+<p>+228 22 21 00 00</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mx-auto mt-16 flex max-w-container-max flex-col items-center justify-between gap-4 border-t border-white/10 px-margin-desktop pt-8 md:flex-row">
+<p class="font-body-md text-body-md text-blue-200/50">© 2024 Commune de Lomé — Excellence &amp; Tradition.</p>
+<div class="flex flex-wrap justify-center gap-6 font-label-sm text-label-sm text-blue-200/50">
+<a class="transition-colors hover:text-white" href="plan-du-site.html#mentions-legales">Mentions légales</a>
+<a class="transition-colors hover:text-white" href="plan-du-site.html#accessibilite">Accessibilité</a>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

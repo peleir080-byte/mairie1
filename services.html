@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>État civil &amp; Citoyenneté - Commune de Lomé</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1a1c1c",
+                        "primary": "#000000",
+                        "on-primary-fixed": "#1b1b1f",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "surface-tint": "#5f5e62",
+                        "secondary-fixed-dim": "#b1c5ff",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary": "#735c00",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#47464b",
+                        "surface-variant": "#e2e2e2",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#dae2ff",
+                        "tertiary-container": "#cca730",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "surface-dim": "#dadada",
+                        "primary-container": "#1b1b1f",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c8c5cb",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#78767b",
+                        "tertiary-fixed": "#ffe088",
+                        "on-primary-fixed-variant": "#47464b",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#e4e1e7",
+                        "on-tertiary-fixed": "#241a00",
+                        "surface-container": "#eeeeee",
+                        "secondary": "#0054cb",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary-container": "#fefcff",
+                        "surface": "#f9f9f9",
+                        "on-tertiary-container": "#4f3e00",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary-container": "#848388",
+                        "primary-fixed-dim": "#c8c5cb",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#f9f9f9",
+                        "background": "#f9f9f9",
+                        "on-secondary-fixed": "#001847",
+                        "surface-container-low": "#f3f3f3",
+                        "on-background": "#1a1c1c",
+                        "inverse-primary": "#c8c5cb",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#316ee8",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-secondary-fixed-variant": "#0040a0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-tablet": "40px",
+                        "container-max": "1440px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "title-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "title-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+        }
+        .gold-accent {
+            background: linear-gradient(135deg, #e9c349 0%, #735c00 100%);
+        }
+        .emerald-subtle {
+            color: #006b54;
+        }
+        .carousel-track {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+        .carousel-track::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-primary-container/70 backdrop-blur-xl border-b border-white/20 h-20">
+<div class="flex justify-between items-center px-margin-desktop h-full max-w-container-max mx-auto">
+<a class="flex items-center gap-3 shrink-0" href="index.html">
+<img alt="Commune de Lomé — logo du portail" class="h-11 w-11 shrink-0 object-contain" height="44" src="assets/logo-mairie.svg" width="44"/>
+<span class="text-title-md font-title-md font-bold text-on-secondary-fixed dark:text-white tracking-tight whitespace-nowrap">Commune de Lomé</span>
+</a>
+<nav class="hidden md:flex flex-nowrap items-center gap-8 lg:gap-10 shrink-0">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-all duration-300 whitespace-nowrap" href="index.html">Accueil</a>
+<a class="font-label-sm text-label-sm text-secondary dark:text-tertiary-fixed font-bold border-b-2 border-secondary dark:border-tertiary-fixed pb-1 whitespace-nowrap" href="services.html">Citoyenneté</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-all duration-300 whitespace-nowrap" href="urbanisme.html">Urbanisme</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-all duration-300 whitespace-nowrap" href="fiscalite.html">Fiscalité</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-all duration-300 whitespace-nowrap" href="actualites.html">Actualités</a>
+</nav>
+<a class="bg-on-secondary-fixed text-white px-6 py-2 rounded-full font-label-sm text-label-sm hover:scale-102 transition-transform shadow-lg inline-flex items-center justify-center" href="espace-citoyen.html">
+                E-Services
+            </a>
+</div>
+</header>
+<main class="pt-20">
+<div class="max-w-container-max mx-auto border-b border-outline-variant/25 bg-surface/95 px-margin-desktop">
+<nav aria-label="E-Services" class="flex flex-wrap items-center gap-x-1 gap-y-2 py-3 text-sm">
+<a class="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-secondary transition-colors" href="index.html">
+<span class="material-symbols-outlined text-lg">home</span>
+<span class="hidden sm:inline">Portail</span>
+</a>
+<span class="text-outline-variant px-1 hidden sm:inline" aria-hidden="true">|</span>
+<a class="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-secondary transition-colors" href="espace-citoyen.html">
+<span class="material-symbols-outlined text-lg">dashboard</span>
+Espace citoyen
+</a>
+<span class="text-outline-variant px-1 hidden md:inline" aria-hidden="true">|</span>
+<a class="inline-flex items-center gap-1.5 rounded-lg bg-secondary-fixed px-3 py-2 font-semibold text-on-secondary-fixed" href="services.html#mes-documents" aria-current="page">
+<span class="material-symbols-outlined text-lg">receipt_long</span>
+Mes documents
+</a>
+<span class="text-outline-variant px-1 hidden md:inline" aria-hidden="true">|</span>
+<a class="inline-flex items-center gap-1.5 rounded-lg px-3 py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-secondary transition-colors" href="fiscalite.html">
+<span class="material-symbols-outlined text-lg">payments</span>
+Paiements &amp; taxes
+</a>
+</nav>
+</div>
+<!-- Hero Section -->
+<section class="relative h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A majestic wide-angle view of the Lomé City Hall and its surrounding modern gardens at sunset. The architectural lighting is soft and golden, while the sky transition from deep blue to warm amber. The scene is shot with high-end photography gear, emphasizing clean lines, lush emerald greenery, and a sophisticated urban environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf6Uu7VqbcZjcU1KncUaPe2jELbcVPzqsBkIijfCE-8BG_zeLzFBu7rkkNceTE9tv486y-pNkU_iHNmecAdCxUTVBOcFU7nJSm_5NUWpx8JyRiRs4EXvMdZEgpbcSlHmKWw7rIS3NMCkftgSdmwhwRn7uewBuGQRSgmMAPsMpH992f0kfjGAudxzun5B-Pooo4o6MtTIdAGmH6aKTrk-p9Bfs-dNaGMTyUKO78msLsXHsTrL_qBx5tFdZrxjJjBxNETrjLA7qHfQ"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl glass-panel p-12 rounded-[32px] text-on-primary shadow-2xl">
+<span class="inline-block py-1 px-3 bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm rounded-full mb-6">SERVICES ADMINISTRATIFS</span>
+<h1 class="font-display-lg text-display-lg mb-6 text-on-secondary-fixed">État Civil</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        Le portail numérique de la Commune de Lomé facilite vos démarches administratives. Commandez vos actes officiels en quelques clics avec la rigueur et l'excellence du service public municipal.
+                    </p>
+<div class="flex gap-4">
+<a class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-full font-title-md text-title-md hover:scale-105 transition-transform flex items-center gap-2" href="espace-citoyen.html">
+<span class="material-symbols-outlined">description</span>
+                            Nouvelle Demande
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Démarches documentaires : carrousel -->
+<section id="mes-documents" class="scroll-mt-28 border-y border-stone-200/80 bg-gradient-to-b from-stone-200/90 via-stone-100/80 to-background py-16 md:py-24" aria-labelledby="services-carousel-title">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-8 max-w-2xl">
+<p class="mb-2 font-label-sm text-label-sm font-semibold uppercase tracking-wider text-stone-600">État civil — démarches en ligne</p>
+<h2 id="services-carousel-title" class="font-headline-lg text-headline-lg text-on-secondary-fixed">Nos services documentaires</h2>
+<p class="mt-3 font-body-md text-body-md leading-relaxed text-stone-600">Parcourez les fiches démarches. Chaque carte ouvre l’espace citoyen pour initier une demande.</p>
+</div>
+<div class="relative rounded-[2rem] border border-stone-300/80 bg-gradient-to-br from-white via-stone-50 to-secondary-fixed/25 p-4 shadow-xl ring-1 ring-stone-200/50 md:p-8">
+<div class="pointer-events-none absolute inset-y-6 left-0 z-10 hidden w-10 bg-gradient-to-r from-white via-white/80 to-transparent md:block md:w-14"></div>
+<div class="pointer-events-none absolute inset-y-6 right-0 z-10 hidden w-10 bg-gradient-to-l from-white via-white/80 to-transparent md:block md:w-14"></div>
+<button type="button" id="svc-carousel-prev" class="absolute left-1 top-1/2 z-20 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-stone-200 bg-white text-secondary shadow-lg transition hover:border-secondary hover:bg-secondary hover:text-white sm:left-2 md:h-12 md:w-12" aria-label="Démarches précédentes">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button type="button" id="svc-carousel-next" class="absolute right-1 top-1/2 z-20 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-stone-200 bg-white text-secondary shadow-lg transition hover:border-secondary hover:bg-secondary hover:text-white sm:right-2 md:h-12 md:w-12" aria-label="Démarches suivantes">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+<div id="services-carousel-track" class="carousel-track flex snap-x snap-mandatory gap-5 overflow-x-auto px-1 py-2 md:gap-7 md:px-12 md:py-3">
+<article class="snap-center shrink-0 first:pl-1 last:pr-1" style="width: min(340px, calc(100vw - 3rem));">
+<div class="flex h-full flex-col overflow-hidden rounded-3xl border border-stone-200/90 bg-white shadow-lg ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:ring-secondary/30">
+<div class="relative h-52 shrink-0 overflow-hidden bg-stone-900 md:h-56">
+<img alt="Illustration — acte de naissance" class="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCktmvMY0BIwKMxLemtvttckZOUgy55pOdHTugNlW2bG1RLjyDBcbHCzB-voEHB7bPYoiGrMQ52kReCTpuqR91UI7W5jQO4e-dIs5JgoOQTK8VwPFHim26GMvO1kc7KyecleqCRsUvNQ-c6tqCNyVA5DWRxsunviIe5aFYNVatSjUpJIkjkOvifr9TaGb0xgFpv85tC2cWdsKjfkDrF8Zj9WzeD6RcjW_dL7pTI6BQgIKaDezuWky9Z4Krq66vY3CT7FtxRSZKTTQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex items-end gap-3">
+<span class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/95 text-secondary shadow-md">
+<span class="material-symbols-outlined text-2xl">child_care</span>
+</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="font-title-md text-title-md text-on-secondary-fixed">Acte de naissance</h3>
+<p class="mt-2 flex-1 font-body-md text-body-md leading-relaxed text-on-surface-variant">Copie intégrale ou extrait d’acte pour vos démarches administratives.</p>
+<a class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-on-secondary-fixed py-3.5 font-label-sm text-label-sm font-semibold text-white transition-opacity hover:opacity-90" href="espace-citoyen.html">Démarrer la demande <span class="material-symbols-outlined text-base">arrow_forward</span></a>
+</div>
+</div>
+</article>
+<article class="snap-center shrink-0 first:pl-1 last:pr-1" style="width: min(340px, calc(100vw - 3rem));">
+<div class="flex h-full flex-col overflow-hidden rounded-3xl border border-stone-200/90 bg-white shadow-lg ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:ring-secondary/30">
+<div class="relative h-52 shrink-0 overflow-hidden bg-stone-900 md:h-56">
+<img alt="Illustration — mariage" class="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKhTKeDPaZ8KVx7Xdzt8BHeqQLSzE4nDR7Ge2_rGdLqlM2yeT6Iqb5BeCj-HP3xIM00e-00DM9vUBlcrVdudBjOJYU--w4Auue1p6I4FXc3uoYcpoxRan13s2iDxJzZhqojLF_2NCVnvty2nm9LzP5xp33GQWvmoSkf11an5ZN-Dc_u5Xq-Bpnf0gPuxikIZh4SfC3bvOcorjl_s9XF2K4uH6JhnCJBddf2a8OC6jEeNKdhrJCnB6fqE0lDudr7BK_-k2x5IFOIw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex items-end gap-3">
+<span class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/95 text-secondary shadow-md">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="font-title-md text-title-md text-on-secondary-fixed">Acte de mariage</h3>
+<p class="mt-2 flex-1 font-body-md text-body-md leading-relaxed text-on-surface-variant">Extraits d’acte pour dossiers civils, bancaires ou familiaux.</p>
+<a class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-on-secondary-fixed py-3.5 font-label-sm text-label-sm font-semibold text-white transition-opacity hover:opacity-90" href="espace-citoyen.html">Démarrer la demande <span class="material-symbols-outlined text-base">arrow_forward</span></a>
+</div>
+</div>
+</article>
+<article class="snap-center shrink-0 first:pl-1 last:pr-1" style="width: min(340px, calc(100vw - 3rem));">
+<div class="flex h-full flex-col overflow-hidden rounded-3xl border border-stone-200/90 bg-white shadow-lg ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:ring-secondary/30">
+<div class="relative h-52 shrink-0 overflow-hidden bg-stone-900 md:h-56">
+<img alt="Illustration — hommage et mémoire" class="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXNeyVA6p3zP62ecvZNBWvYsjlZtqqS1XtfSMSfCtdzUKoC3XtAKAHCuftfqWEzZZXRjbfVjguHgeVhLsVZopkR-zXGgz_zr5euoOUcuCiEgNDrha3CoJWPAcd_HyCMMp6NurgTeNmFwAMTFu9yw2K07Zn9vHj4nsaDroXWVl9VCKVgInA62i6MF9Lh2wHprLnSV9m2fSLmCLrBmf-0NZdWdkDa5MmVt3VRgwGGJtsvf1mcU7wm7V3PYpai1Ab85uUkp5suHsynQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex items-end gap-3">
+<span class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/95 text-secondary shadow-md">
+<span class="material-symbols-outlined text-2xl">heart_broken</span>
+</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="font-title-md text-title-md text-on-secondary-fixed">Acte de décès</h3>
+<p class="mt-2 flex-1 font-body-md text-body-md leading-relaxed text-on-surface-variant">Démarches liées à la déclaration et à la délivrance d’actes.</p>
+<a class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-on-secondary-fixed py-3.5 font-label-sm text-label-sm font-semibold text-white transition-opacity hover:opacity-90" href="espace-citoyen.html">Démarrer la demande <span class="material-symbols-outlined text-base">arrow_forward</span></a>
+</div>
+</div>
+</article>
+<article class="snap-center shrink-0 first:pl-1 last:pr-1" style="width: min(340px, calc(100vw - 3rem));">
+<div class="flex h-full flex-col overflow-hidden rounded-3xl border border-stone-200/90 bg-white shadow-lg ring-1 ring-black/5 transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:ring-secondary/30">
+<div class="relative h-52 shrink-0 overflow-hidden bg-stone-900 md:h-56">
+<img alt="Illustration — résidence et logement" class="absolute inset-0 h-full w-full object-cover transition duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuYxZQWNKl5CDGll6_v7Iti25BqrYqlYRrfJa-bzcMbHAWoQDyO38-_Mfw5Na-aQ5_q3g_QCqmMtNXjFgf5iHTFfN2BxKONM5_edI-gV41Gr5ab6gT8xd_EA3K1Gc9vwa6hebt5mnWwo0Y54aHu64BaGRm9_vhbmvsLbFnXQ_9_9IEflMAQ1ttdX7a_ZwuNjboFnVrN4UHzNHiapPx24-SZK2hFrr_DOhr4pCYV_l5NkneKHfnO0Rx95mgY9mbv9CKlfTQJsJRNag"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex items-end gap-3">
+<span class="flex h-11 w-11 items-center justify-center rounded-xl bg-white/95 shadow-md">
+<span class="material-symbols-outlined emerald-subtle text-2xl">home_pin</span>
+</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-6">
+<h3 class="font-title-md text-title-md text-on-secondary-fixed">Certificat de résidence</h3>
+<p class="mt-2 flex-1 font-body-md text-body-md leading-relaxed text-on-surface-variant">Attestation de domicile pour administrations et organismes.</p>
+<a class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-on-secondary-fixed py-3.5 font-label-sm text-label-sm font-semibold text-white transition-opacity hover:opacity-90" href="espace-citoyen.html">Démarrer la demande <span class="material-symbols-outlined text-base">arrow_forward</span></a>
+</div>
+</div>
+</article>
+</div>
+<p class="mt-3 text-center text-xs text-stone-500 md:hidden">Glissez horizontalement pour voir toutes les démarches.</p>
+</div>
+</div>
+</section>
+<!-- Track Your Application -->
+<section class="py-[120px] bg-surface-container-low overflow-hidden">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="glass-panel rounded-[40px] overflow-hidden grid grid-cols-1 md:grid-cols-2 shadow-2xl">
+<div class="p-16 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-6">
+<span class="w-10 h-1 bg-secondary rounded-full"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">SUIVI EN TEMPS RÉEL</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-secondary-fixed mb-6">Suivez l'état de votre demande</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10 leading-relaxed">
+                            Saisissez votre numéro de référence pour consulter l'avancement du traitement de votre dossier par nos services municipaux.
+                        </p>
+<div class="relative group">
+<input class="w-full pl-14 pr-32 py-5 rounded-full border-none bg-white shadow-inner focus:ring-2 focus:ring-secondary/20 transition-all font-body-md" placeholder="Référence de dossier (ex: LOME-2024-XXXX)" type="text"/>
+<span class="material-symbols-outlined absolute left-6 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-secondary">search</span>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 bg-on-secondary-fixed text-white px-8 py-3 rounded-full font-label-sm text-label-sm hover:bg-primary transition-colors">
+                                Rechercher
+                            </button>
+</div>
+<div class="mt-8 flex items-center gap-4 text-outline">
+<span class="material-symbols-outlined text-sm">info</span>
+<p class="text-xs font-label-sm">Votre référence se trouve sur votre récépissé de dépôt.</p>
+</div>
+</div>
+<div class="relative min-h-[400px]">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist close-up of a professional desk in an upscale office. A fountain pen rests on a piece of high-quality parchment paper next to a modern smartphone displaying a tracking interface. The lighting is bright and clear, emphasizing themes of bureaucratic efficiency, trust, and digital transformation in a premium municipal setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCktmvMY0BIwKMxLemtvttckZOUgy55pOdHTugNlW2bG1RLjyDBcbHCzB-voEHB7bPYoiGrMQ52kReCTpuqR91UI7W5jQO4e-dIs5JgoOQTK8VwPFHim26GMvO1kc7KyecleqCRsUvNQ-c6tqCNyVA5DWRxsunviIe5aFYNVatSjUpJIkjkOvifr9TaGb0xgFpv85tC2cWdsKjfkDrF8Zj9WzeD6RcjW_dL7pTI6BQgIKaDezuWky9Z4Krq66vY3CT7FtxRSZKTTQ"/>
+<div class="absolute inset-0 bg-secondary/10"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Required Documents -->
+<section class="py-[120px] px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg text-on-secondary-fixed mb-4">Pièces à fournir</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Assurez-vous de disposer de tous les documents numérisés avant de commencer votre demande en ligne.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="border-l-4 border-secondary p-8 bg-white shadow-sm rounded-r-2xl">
+<h4 class="font-title-md text-title-md text-on-secondary-fixed mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">attachment</span>
+                        Naissance
+                    </h4>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Copie simple de l'ancien acte</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Pièce d'identité d'un parent</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-secondary text-sm">check_circle</span> Livret de famille (optionnel)</li>
+</ul>
+</div>
+<div class="border-l-4 border-tertiary p-8 bg-white shadow-sm rounded-r-2xl">
+<h4 class="font-title-md text-title-md text-on-secondary-fixed mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">attachment</span>
+                        Mariage
+                    </h4>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li class="flex gap-3"><span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Noms complets des conjoints</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Date et lieu de célébration</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-tertiary text-sm">check_circle</span> Copie de la pièce d'identité</li>
+</ul>
+</div>
+<div class="border-l-4 border-emerald-600 p-8 bg-white shadow-sm rounded-r-2xl">
+<h4 class="font-title-md text-title-md text-on-secondary-fixed mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined emerald-subtle">attachment</span>
+                        Résidence
+                    </h4>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li class="flex gap-3"><span class="material-symbols-outlined emerald-subtle text-sm">check_circle</span> Preuve de domicile (Facture)</li>
+<li class="flex gap-3"><span class="material-symbols-outlined emerald-subtle text-sm">check_circle</span> Carte Nationale d'Identité</li>
+<li class="flex gap-3"><span class="material-symbols-outlined emerald-subtle text-sm">check_circle</span> 2 photos d'identité récentes</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Support Section -->
+<section class="mb-[120px] px-margin-desktop max-w-container-max mx-auto">
+<div class="gold-accent p-16 rounded-[40px] text-white flex flex-col md:flex-row items-center justify-between gap-12 shadow-xl">
+<div class="max-w-md">
+<h2 class="font-headline-lg text-headline-lg mb-6">Besoin d'assistance ?</h2>
+<p class="font-body-md text-body-md opacity-90 mb-8">Nos agents vous accompagnent dans vos démarches administratives du lundi au vendredi, de 08h00 à 17h30.</p>
+<div class="flex items-center gap-8">
+<div class="group flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-white/70 mb-2">Numéro Vert</span>
+<a href="tel:8000000" class="text-4xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300 tracking-tight">80 00 00 00</a>
+<span class="text-xs text-white/50 mt-1">Appel gratuit depuis le Togo</span>
+</div>
+<div class="w-px h-16 bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
+<div class="group flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-white/70 mb-2">Email</span>
+<a href="mailto:etatcivil@lome.tg" class="text-xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">etatcivil@lome.tg</a>
+<span class="text-xs text-white/50 mt-1">Réponse sous 24h</span>
+</div>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-[32px] text-on-surface-variant max-w-xs w-full shadow-lg">
+<h4 class="font-title-md text-title-md text-on-secondary-fixed mb-4">Horaires de Guichet</h4>
+<div class="space-y-3 font-body-md">
+<div class="flex justify-between">
+<span>Lun - Ven</span>
+<span class="font-bold">07:00 - 17:30</span>
+</div>
+<div class="flex justify-between">
+<span>Samedi</span>
+<span class="font-bold">08:00 - 12:00</span>
+</div>
+<div class="flex justify-between text-error font-bold mt-4">
+<span>Dimanche</span>
+<span>Fermé</span>
+</div>
+</div>
+<button class="w-full mt-8 bg-on-secondary-fixed text-white py-4 rounded-xl font-label-sm text-label-sm hover:scale-102 transition-transform">
+                        Prendre rendez-vous
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (style accueil + image) -->
+<footer class="relative w-full overflow-hidden text-white">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-br from-[#001847] via-[#002466] to-[#000818]"></div>
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80')] bg-cover bg-center opacity-5"></div>
+<div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 blur-[120px]"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 blur-[120px]"></div>
+</div>
+<div class="relative z-10 py-24">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm">
+<img alt="Commune de Lomé — logo du portail" class="h-8 w-8 object-contain" height="32" src="assets/logo-mairie.svg" width="32"/>
+</div>
+<span class="font-title-md text-title-md text-white font-bold">Commune de Lomé</span>
+</div>
+<p class="font-body-md text-body-md text-blue-200/80">L'excellence au service du citoyen togolais. Tradition, Progrès et Modernité.</p>
+<div class="flex gap-3">
+<a class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110" href="https://lome.tg" rel="noopener noreferrer" target="_blank" aria-label="Site web">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110" href="mailto:contact@lome.tg" aria-label="Email">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20 hover:scale-110" href="tel:+22822210000" aria-label="Téléphone">
+<span class="material-symbols-outlined text-lg">call</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-title-md text-title-md mb-6 text-white font-semibold">Services</h5>
+<ul class="space-y-3 text-sm text-blue-200/70">
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="services.html#mes-documents"><span class="material-symbols-outlined text-base">arrow_right</span>État Civil</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="urbanisme.html"><span class="material-symbols-outlined text-base">arrow_right</span>Urbanisme</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="fiscalite.html"><span class="material-symbols-outlined text-base">arrow_right</span>Fiscalité Locale</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="espace-citoyen.html"><span class="material-symbols-outlined text-base">arrow_right</span>E-Services</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-title-md text-title-md mb-6 text-white font-semibold">Institution</h5>
+<ul class="space-y-3 text-sm text-blue-200/70">
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="mairie.html"><span class="material-symbols-outlined text-base">arrow_right</span>Le Maire</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="mairie.html#organisation"><span class="material-symbols-outlined text-base">arrow_right</span>Conseil Municipal</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="urbanisme.html"><span class="material-symbols-outlined text-base">arrow_right</span>Projets Urbains</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="contact.html"><span class="material-symbols-outlined text-base">arrow_right</span>Contacter la Mairie</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-title-md text-title-md mb-6 text-white font-semibold">Newsletter</h5>
+<p class="font-body-md text-body-md text-blue-200/80 mb-6">Restez informé des activités de votre commune.</p>
+<div class="relative">
+<input class="w-full bg-white/10 border-white/20 rounded-full py-4 pl-6 pr-12 focus:ring-2 focus:ring-white/30 focus:border-white/40 transition-all backdrop-blur-sm" placeholder="votre@email.com" type="email"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/20 hover:bg-white/30 transition-all">
+<span class="material-symbols-outlined text-white">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-white/10 px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-blue-200/50">© 2024 Commune de Lomé - Excellence &amp; Tradition.</p>
+<div class="flex gap-8 font-label-sm text-label-sm text-blue-200/50">
+<a class="transition-colors hover:text-white" href="contact.html">Contact</a>
+<a class="transition-colors hover:text-white" href="plan-du-site.html#mentions-legales">Mentions Légales</a>
+<a class="transition-colors hover:text-white" href="plan-du-site.html#accessibilite">Accessibilité</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+(function () {
+  var track = document.getElementById('services-carousel-track');
+  var prev = document.getElementById('svc-carousel-prev');
+  var next = document.getElementById('svc-carousel-next');
+  if (!track || !prev || !next) return;
+  function step() {
+    var card = track.querySelector('article');
+    if (!card) return 340;
+    var styles = window.getComputedStyle(track);
+    var gap = parseFloat(styles.columnGap || styles.gap) || 20;
+    return card.getBoundingClientRect().width + gap;
+  }
+  prev.addEventListener('click', function () {
+    track.scrollBy({ left: -step(), behavior: 'smooth' });
+  });
+  next.addEventListener('click', function () {
+    track.scrollBy({ left: step(), behavior: 'smooth' });
+  });
+})();
+</script>
+<!-- FAB (Suppressed on Details as per rules, but shown here for transactional context if applicable) -->
+<button class="fixed bottom-10 right-10 gold-accent text-white p-6 rounded-full shadow-2xl hover:scale-110 transition-transform z-40">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">chat_bubble</span>
+</button>
+</body></html>

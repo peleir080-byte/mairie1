@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Espace Citoyen - Commune de Lomé</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#0054cb",
+                        "outline": "#78767b",
+                        "on-error-container": "#93000a",
+                        "surface": "#f9f9f9",
+                        "on-primary-fixed": "#1b1b1f",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-container": "#fefcff",
+                        "tertiary-container": "#cca730",
+                        "secondary-fixed": "#dae2ff",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#735c00",
+                        "primary": "#000000",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "primary-fixed": "#e4e1e7",
+                        "background": "#f9f9f9",
+                        "on-secondary-fixed-variant": "#0040a0",
+                        "surface-bright": "#f9f9f9",
+                        "surface-variant": "#e2e2e2",
+                        "on-surface-variant": "#47464b",
+                        "on-background": "#1a1c1c",
+                        "on-tertiary-fixed": "#241a00",
+                        "surface-tint": "#5f5e62",
+                        "inverse-surface": "#2f3131",
+                        "secondary-fixed-dim": "#b1c5ff",
+                        "surface-container-low": "#f3f3f3",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-primary-fixed-variant": "#47464b",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#c8c5cb",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#1b1b1f",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "surface-container": "#eeeeee",
+                        "tertiary-fixed": "#ffe088",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#dadada",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed": "#001847",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "inverse-primary": "#c8c5cb",
+                        "outline-variant": "#c8c5cb",
+                        "secondary-container": "#316ee8",
+                        "on-tertiary-container": "#4f3e00",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#848388"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "margin-tablet": "40px",
+                        "container-max": "1440px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "title-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "title-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .glass-dark {
+            background: rgba(27, 27, 31, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .emerald-gradient {
+            background: linear-gradient(135deg, #006a4e 0%, #004d3a 100%);
+        }
+        .gold-accent {
+            background: linear-gradient(135deg, #ffe088 0%, #cca730 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #FAFAFA;
+            color: #1a1c1c;
+        }
+        /* Dégradé léger pour laisser la photo bien visible (comme services.html) */
+        .hero-espace-overlay {
+            background: linear-gradient(105deg, rgba(0, 24, 71, 0.16) 0%, rgba(0, 24, 71, 0.04) 48%, transparent 82%);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden bg-[#f4f6fb] text-on-surface">
+<header class="fixed top-0 z-50 w-full border-b border-stone-200/80 bg-white/95 shadow-sm backdrop-blur-xl">
+<div class="mx-auto flex h-20 max-w-container-max items-center justify-between gap-3 px-4 sm:px-margin-desktop">
+<a class="flex min-w-0 shrink-0 items-center gap-2 sm:gap-3" href="index.html">
+<img alt="Commune de Lomé — logo du portail" class="h-10 w-10 shrink-0 object-contain sm:h-11 sm:w-11" height="44" src="assets/logo-mairie.svg" width="44"/>
+<span class="truncate font-title-md text-sm font-bold text-on-secondary-fixed sm:text-base md:whitespace-nowrap md:text-title-md">Commune de Lomé</span>
+</a>
+<nav class="hidden shrink-0 items-center gap-6 md:flex lg:gap-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant transition-colors hover:text-secondary" href="index.html">Accueil</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant transition-colors hover:text-secondary" href="services.html">Citoyenneté</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant transition-colors hover:text-secondary" href="urbanisme.html">Urbanisme</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant transition-colors hover:text-secondary" href="fiscalite.html">Fiscalité</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant transition-colors hover:text-secondary" href="actualites.html">Actualités</a>
+</nav>
+<a class="shrink-0 rounded-full bg-on-secondary-fixed px-4 py-2 text-xs font-semibold text-white shadow-md ring-2 ring-secondary/30 transition-opacity hover:opacity-90 sm:px-6 sm:text-label-sm" href="espace-citoyen.html">E-Services</a>
+</div>
+</header>
+<main class="min-h-screen pb-20 pt-20">
+<div class="mx-auto max-w-container-max px-4 sm:px-margin-desktop">
+<nav aria-label="Fil d’Ariane E-Services" class="flex flex-wrap items-center gap-x-2 gap-y-2 border-b border-stone-200/80 py-4 text-sm text-on-surface-variant">
+<a class="inline-flex items-center gap-1 rounded-lg px-2 py-1 hover:bg-white hover:text-secondary" href="index.html"><span class="material-symbols-outlined text-base">home</span> Portail</a>
+<span class="text-stone-300" aria-hidden="true">/</span>
+<span class="inline-flex items-center gap-1 rounded-lg bg-secondary/10 px-3 py-1.5 font-semibold text-on-secondary-fixed"><span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL'1">account_circle</span> Espace citoyen</span>
+<span class="ml-auto hidden sm:block"><a class="rounded-lg bg-on-secondary-fixed px-4 py-2 text-xs font-bold text-white hover:opacity-90" href="contact.html">Aide &amp; contact</a></span>
+</nav>
+<section class="relative mt-6 overflow-hidden rounded-3xl shadow-xl ring-1 ring-stone-200/60">
+<div class="absolute inset-0">
+<img alt="Hôtel de ville et services municipaux" class="h-full min-h-[280px] w-full object-cover sm:min-h-[340px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf6Uu7VqbcZjcU1KncUaPe2jELbcVPzqsBkIijfCE-8BG_zeLzFBu7rkkNceTE9tv486y-pNkU_iHNmecAdCxUTVBOcFU7nJSm_5NUWpx8JyRiRs4EXvMdZEgpbcSlHmKWw7rIS3NMCkftgSdmwhwRn7uewBuGQRSgmMAPsMpH992f0kfjGAudxzun5B-Pooo4o6MtTIdAGmH6aKTrk-p9Bfs-dNaGMTyUKO78msLsXHsTrL_qBx5tFdZrxjJjBxNETrjLA7qHfQ"/>
+<div class="absolute inset-0 bg-gradient-to-r from-[#001847]/92 via-[#001847]/65 to-transparent"></div>
+</div>
+<div class="relative z-10 grid min-h-[280px] items-center gap-8 px-6 py-10 sm:min-h-[340px] sm:px-10 lg:grid-cols-2 lg:py-14">
+<div class="max-w-xl text-white">
+<span class="mb-3 inline-block rounded-full bg-white/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-amber-200 ring-1 ring-white/20">Plateforme municipale</span>
+<h1 class="font-display-lg text-[2rem] font-bold leading-tight sm:text-display-lg">Espace citoyen</h1>
+<p class="mt-4 text-base leading-relaxed text-white/85 sm:text-body-lg">Un point d’entrée unique pour vos démarches : état civil, urbanisme, fiscalité et suivi. Les contenus ci-dessous sont reliés aux pages officielles du portail ; le suivi par référence fonctionne en démonstration pour les numéros d’exemple.</p>
+<div class="mt-6 flex flex-wrap gap-3">
+<a class="inline-flex items-center gap-2 rounded-full bg-amber-400 px-6 py-3 text-sm font-bold text-[#001847] shadow-lg transition-transform hover:scale-[1.02]" href="services.html#mes-documents">Nouvelle démarche</a>
+<a class="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm hover:bg-white/20" href="fiscalite.html">Paiements &amp; taxes</a>
+</div>
+</div>
+<div class="rounded-2xl border border-white/20 bg-white/95 p-6 shadow-2xl backdrop-blur-md sm:p-8">
+<p class="text-xs font-bold uppercase tracking-wide text-secondary">Connexion (démonstration)</p>
+<p class="mt-1 text-sm text-on-surface-variant">L’authentification réelle sera branchée sur votre système. Ici, accédez directement aux rubriques.</p>
+<div class="mt-4 space-y-3">
+<label class="block text-xs font-semibold text-on-secondary-fixed" for="demo-email">Adresse e-mail</label>
+<input class="w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 text-sm outline-none ring-secondary/0 transition focus:border-secondary focus:ring-2 focus:ring-secondary/20" id="demo-email" autocomplete="username" type="email" placeholder="vous@exemple.tg"/>
+<label class="block text-xs font-semibold text-on-secondary-fixed" for="demo-pass">Mot de passe</label>
+<input class="w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 text-sm outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20" id="demo-pass" autocomplete="current-password" type="password" placeholder="••••••••"/>
+</div>
+<p class="mt-3 text-xs text-stone-500">Mot de passe oublié ? <a class="font-semibold text-secondary hover:underline" href="contact.html">Contactez le guichet</a>.</p>
+<a class="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-on-secondary-fixed py-3.5 text-sm font-bold text-white hover:opacity-90" href="services.html#mes-documents"><span class="material-symbols-outlined text-lg">login</span> Accéder aux démarches</a>
+</div>
+</div>
+</section>
+<section class="mt-10" aria-labelledby="hub-title">
+<h2 id="hub-title" class="font-headline-lg text-headline-lg text-on-secondary-fixed">Services en ligne</h2>
+<p class="mt-2 max-w-3xl text-sm text-on-surface-variant sm:text-body-md">Chaque carte ouvre la page du portail concernée. Utilisez-les comme raccourcis depuis votre espace.</p>
+<div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+<a class="group flex flex-col overflow-hidden rounded-2xl border border-stone-200/90 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg" href="services.html#mes-documents">
+<div class="h-1.5 bg-gradient-to-r from-violet-500 to-indigo-600"></div>
+<div class="flex flex-1 flex-col p-5">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-100 text-violet-700"><span class="material-symbols-outlined">how_to_reg</span></div>
+<h3 class="mt-4 font-title-md text-title-md text-on-secondary-fixed">État civil</h3>
+<p class="mt-2 flex-1 text-sm text-on-surface-variant">Actes de naissance, mariage, décès, certificats.</p>
+<span class="mt-4 inline-flex items-center gap-1 text-sm font-bold text-secondary">Ouvrir <span class="material-symbols-outlined text-lg transition group-hover:translate-x-1">arrow_forward</span></span>
+</div>
+</a>
+<a class="group flex flex-col overflow-hidden rounded-2xl border border-stone-200/90 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg" href="urbanisme.html">
+<div class="h-1.5 bg-gradient-to-r from-amber-500 to-orange-600"></div>
+<div class="flex flex-1 flex-col p-5">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-100 text-amber-800"><span class="material-symbols-outlined">map</span></div>
+<h3 class="mt-4 font-title-md text-title-md text-on-secondary-fixed">Urbanisme &amp; foncier</h3>
+<p class="mt-2 flex-1 text-sm text-on-surface-variant">Permis, cadastre, certificats d’urbanisme.</p>
+<span class="mt-4 inline-flex items-center gap-1 text-sm font-bold text-secondary">Ouvrir <span class="material-symbols-outlined text-lg transition group-hover:translate-x-1">arrow_forward</span></span>
+</div>
+</a>
+<a class="group flex flex-col overflow-hidden rounded-2xl border border-stone-200/90 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg" href="fiscalite.html">
+<div class="h-1.5 bg-gradient-to-r from-emerald-500 to-teal-600"></div>
+<div class="flex flex-1 flex-col p-5">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100 text-emerald-800"><span class="material-symbols-outlined">payments</span></div>
+<h3 class="mt-4 font-title-md text-title-md text-on-secondary-fixed">Fiscalité</h3>
+<p class="mt-2 flex-1 text-sm text-on-surface-variant">Informations, échéances et canaux de paiement.</p>
+<span class="mt-4 inline-flex items-center gap-1 text-sm font-bold text-secondary">Ouvrir <span class="material-symbols-outlined text-lg transition group-hover:translate-x-1">arrow_forward</span></span>
+</div>
+</a>
+<a class="group flex flex-col overflow-hidden rounded-2xl border border-stone-200/90 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg" href="actualites.html">
+<div class="h-1.5 bg-gradient-to-r from-sky-500 to-blue-700"></div>
+<div class="flex flex-1 flex-col p-5">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-100 text-sky-800"><span class="material-symbols-outlined">newspaper</span></div>
+<h3 class="mt-4 font-title-md text-title-md text-on-secondary-fixed">Actualités</h3>
+<p class="mt-2 flex-1 text-sm text-on-surface-variant">Communiqués et vie municipale.</p>
+<span class="mt-4 inline-flex items-center gap-1 text-sm font-bold text-secondary">Ouvrir <span class="material-symbols-outlined text-lg transition group-hover:translate-x-1">arrow_forward</span></span>
+</div>
+</a>
+<a class="group flex flex-col overflow-hidden rounded-2xl border border-stone-200/90 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg" href="evenements.html">
+<div class="h-1.5 bg-gradient-to-r from-rose-500 to-pink-600"></div>
+<div class="flex flex-1 flex-col p-5">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-rose-100 text-rose-800"><span class="material-symbols-outlined">event</span></div>
+<h3 class="mt-4 font-title-md text-title-md text-on-secondary-fixed">Agenda</h3>
+<p class="mt-2 flex-1 text-sm text-on-surface-variant">Consultations et événements publics.</p>
+<span class="mt-4 inline-flex items-center gap-1 text-sm font-bold text-secondary">Ouvrir <span class="material-symbols-outlined text-lg transition group-hover:translate-x-1">arrow_forward</span></span>
+</div>
+</a>
+<a class="group flex flex-col overflow-hidden rounded-2xl border border-stone-200/90 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg" href="contact.html">
+<div class="h-1.5 bg-gradient-to-r from-slate-500 to-slate-800"></div>
+<div class="flex flex-1 flex-col p-5">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-100 text-slate-800"><span class="material-symbols-outlined">support_agent</span></div>
+<h3 class="mt-4 font-title-md text-title-md text-on-secondary-fixed">Guichets &amp; contact</h3>
+<p class="mt-2 flex-1 text-sm text-on-surface-variant">Horaires, adresse et prise de rendez-vous.</p>
+<span class="mt-4 inline-flex items-center gap-1 text-sm font-bold text-secondary">Ouvrir <span class="material-symbols-outlined text-lg transition group-hover:translate-x-1">arrow_forward</span></span>
+</div>
+</a>
+</div>
+</section>
+<div class="mt-10 grid gap-6 lg:grid-cols-2">
+<section class="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8" aria-labelledby="track-title">
+<h2 id="track-title" class="font-headline-lg text-headline-lg-mobile text-on-secondary-fixed sm:text-headline-lg">Suivi par n° de dossier</h2>
+<p class="mt-2 text-sm text-on-surface-variant">Essayez les références d’exemple : <strong class="text-on-surface">LOM-2024-884</strong> ou <strong class="text-on-surface">LOM-2024-102</strong>.</p>
+<form class="mt-5 space-y-4" id="track-form" novalidate="">
+<label class="sr-only" for="ref-input">Référence</label>
+<input class="w-full rounded-xl border border-stone-200 px-4 py-3 text-sm font-mono uppercase outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20" id="ref-input" placeholder="Ex. LOM-2024-884" type="text" autocomplete="off"/>
+<button class="w-full rounded-xl bg-secondary py-3.5 text-sm font-bold text-white hover:bg-blue-700" type="submit">Afficher le statut</button>
+</form>
+<div class="mt-4 hidden rounded-xl border border-stone-200 bg-stone-50 p-4 text-sm" id="track-result" role="status"></div>
+</section>
+<section class="rounded-2xl border border-stone-200 bg-gradient-to-br from-secondary/5 to-white p-6 shadow-sm sm:p-8">
+<h2 class="font-headline-lg text-headline-lg-mobile text-on-secondary-fixed sm:text-headline-lg">Besoin d’aide ?</h2>
+<p class="mt-2 text-sm text-on-surface-variant">Horaires, guichets et signalement : tout passe par les canaux officiels.</p>
+<ul class="mt-5 space-y-3 text-sm">
+<li class="flex gap-3"><span class="material-symbols-outlined text-secondary">call</span><a class="font-semibold text-secondary hover:underline" href="tel:+22822210000">+228 22 21 00 00</a> — Standard</li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-secondary">mail</span><a class="font-semibold text-secondary hover:underline" href="mailto:contact@lome.tg">contact@lome.tg</a></li>
+<li class="flex gap-3"><span class="material-symbols-outlined text-secondary">location_on</span><span>Hôtel de Ville, Lomé</span></li>
+</ul>
+<div class="mt-6 flex flex-wrap gap-3">
+<a class="inline-flex flex-1 min-w-[140px] items-center justify-center gap-2 rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm font-semibold text-on-secondary-fixed shadow-sm hover:border-secondary" href="contact.html"><span class="material-symbols-outlined text-secondary">calendar_month</span> Rendez-vous</a>
+<a class="inline-flex flex-1 min-w-[140px] items-center justify-center gap-2 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-900 hover:bg-red-100" href="mailto:contact@lome.tg?subject=Signalement%20portail"><span class="material-symbols-outlined">flag</span> Signaler</a>
+</div>
+</section>
+</div>
+<section class="mt-10 rounded-2xl border border-dashed border-stone-300 bg-white/80 p-6 sm:p-8" aria-labelledby="demo-dossiers">
+<div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+<h2 id="demo-dossiers" class="font-headline-lg text-headline-lg-mobile text-on-secondary-fixed sm:text-headline-lg">Aperçu de suivi (démonstration)</h2>
+<span class="shrink-0 rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-900">Données fictives</span>
+</div>
+<p class="mt-2 text-sm text-on-surface-variant">Illustration du parcours utilisateur une fois le dossier déposé en mairie.</p>
+<div class="mt-6 space-y-6">
+<div class="rounded-xl border border-stone-200 bg-stone-50/80 p-5">
+<div class="flex flex-wrap items-start justify-between gap-3">
+<div>
+<p class="text-xs font-bold text-secondary">LOM-2024-884</p>
+<p class="font-title-md text-title-md text-on-secondary-fixed">Permis de construire (zone A1)</p>
+</div>
+<span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-bold text-blue-900">En cours</span>
+</div>
+<div class="mt-3 h-2 overflow-hidden rounded-full bg-stone-200"><div class="h-full w-3/4 rounded-full bg-secondary"></div></div>
+<p class="mt-2 text-xs text-on-surface-variant">Étape 3/4 — inspection technique (exemple).</p>
+</div>
+<div class="rounded-xl border border-stone-200 bg-stone-50/80 p-5">
+<div class="flex flex-wrap items-start justify-between gap-3">
+<div>
+<p class="text-xs font-bold text-secondary">LOM-2024-102</p>
+<p class="font-title-md text-title-md text-on-secondary-fixed">Acte de naissance (copie intégrale)</p>
+</div>
+<span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-900">Disponible</span>
+</div>
+<div class="mt-3 h-2 overflow-hidden rounded-full bg-stone-200"><div class="h-full w-full rounded-full bg-emerald-600"></div></div>
+<p class="mt-2 text-xs text-on-surface-variant">Retrait au guichet ou envoi selon option choisie (exemple).</p>
+</div>
+</div>
+</section>
+<div class="mt-8 flex flex-wrap justify-center gap-3">
+<a class="inline-flex items-center gap-2 rounded-full bg-on-secondary-fixed px-6 py-3 text-sm font-bold text-white shadow-md hover:opacity-90" href="etat-civil.html">Fiche état civil</a>
+<a class="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-white px-6 py-3 text-sm font-semibold text-on-secondary-fixed hover:border-secondary" href="mairie.html">Institution</a>
+</div>
+</div>
+</main>
+<footer class="relative overflow-hidden text-white">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-br from-[#001847] via-[#002466] to-[#000818]"></div>
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80')] bg-cover bg-center opacity-5"></div>
+<div class="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 blur-[120px]"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-emerald-500/10 blur-[120px]"></div>
+</div>
+<div class="relative z-10 py-24">
+<div class="mx-auto grid max-w-container-max gap-12 px-4 sm:px-margin-desktop md:grid-cols-4 md:gap-8">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<div class="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm">
+<img alt="Commune de Lomé — logo du portail" class="h-8 w-8 object-contain" height="32" src="assets/logo-mairie.svg" width="32"/>
+</div>
+<span class="font-title-md text-title-md text-white font-bold">Commune de Lomé</span>
+</div>
+<p class="text-sm text-blue-200/80">Portail municipal — espace citoyen.</p>
+</div>
+<div>
+<h4 class="mb-6 text-sm font-bold uppercase tracking-wider text-white font-semibold">Accès</h4>
+<ul class="space-y-3 text-sm text-blue-200/70">
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="services.html"><span class="material-symbols-outlined text-base">arrow_right</span>Citoyenneté</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="urbanisme.html"><span class="material-symbols-outlined text-base">arrow_right</span>Urbanisme</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="fiscalite.html"><span class="material-symbols-outlined text-base">arrow_right</span>Fiscalité</a></li>
+</ul>
+</div>
+<div>
+<h4 class="mb-6 text-sm font-bold uppercase tracking-wider text-white font-semibold">Contact</h4>
+<ul class="space-y-3 text-sm text-blue-200/70">
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="contact.html"><span class="material-symbols-outlined text-base">arrow_right</span>Formulaire &amp; guichets</a></li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-blue-400">call</span>+228 22 21 00 00</li>
+</ul>
+</div>
+<div>
+<h4 class="mb-6 text-sm font-bold uppercase tracking-wider text-white font-semibold">Légal</h4>
+<ul class="space-y-3 text-sm text-blue-200/70">
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="plan-du-site.html#mentions-legales"><span class="material-symbols-outlined text-base">arrow_right</span>Mentions légales</a></li>
+<li><a class="transition-all duration-300 hover:text-white hover:translate-x-1 inline-flex items-center gap-2" href="plan-du-site.html#accessibilite"><span class="material-symbols-outlined text-base">arrow_right</span>Accessibilité</a></li>
+</ul>
+</div>
+</div>
+<p class="mx-auto mt-16 max-w-container-max border-t border-white/10 px-4 pt-8 text-center text-xs text-blue-200/50 sm:px-margin-desktop">© 2026 Commune de Lomé</p>
+</div>
+</footer>
+<script>
+(function () {
+  var form = document.getElementById('track-form');
+  var input = document.getElementById('ref-input');
+  var out = document.getElementById('track-result');
+  if (!form || !input || !out) return;
+  function show(html, ok) {
+    out.classList.remove('hidden');
+    out.innerHTML = html;
+    out.className = 'mt-4 rounded-xl border p-4 text-sm ' + (ok ? 'border-emerald-200 bg-emerald-50 text-emerald-950' : 'border-stone-200 bg-stone-50 text-on-surface');
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = input.value.trim().toUpperCase().replace(/\s+/g, '');
+    if (!v) {
+      show('Indiquez une référence de dossier.', false);
+      return;
+    }
+    if (v.indexOf('LOM-2024-884') !== -1) {
+      show('<strong>Permis de construire</strong> — statut démo : <em>en cours</em>, étape 3/4 (inspection). Pour une vraie mise à jour, présentez-vous au service urbanisme ou connectez-vous lorsque le compte sera activé.', true);
+      return;
+    }
+    if (v.indexOf('LOM-2024-102') !== -1) {
+      show('<strong>Acte de naissance</strong> — statut démo : <em>disponible</em>. Retrait au guichet état civil sur présentation d’une pièce d’identité (exemple).', true);
+      return;
+    }
+    show('Référence non reconnue dans cette démo. Vérifiez la saisie ou <a class="font-semibold text-secondary underline" href="contact.html">contactez la mairie</a> avec votre récépissé.', false);
+  });
+})();
+</script>
+</body></html>
