@@ -114,34 +114,30 @@
 </head>
 <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
 <!-- TopNavBar -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-surface/70 backdrop-blur-xl dark:bg-primary-container/70 border-b border-white/20 shadow-sm">
-<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
-<div class="font-display-lg text-title-md font-bold tracking-tight text-primary dark:text-on-secondary-container min-w-0">
-<a class="flex items-center gap-3 hover:opacity-90 transition-opacity" href="index.html">
-<img alt="Commune de Lomé — logo du portail" class="h-10 w-10 shrink-0 object-contain" height="40" src="assets/logo-mairie.svg" width="40"/>
-<span class="whitespace-nowrap truncate max-w-[10rem] sm:max-w-none">Commune de Lomé</span>
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-primary-container/70 backdrop-blur-xl border-b border-white/20 h-20">
+<div class="flex justify-between items-center px-margin-desktop h-full max-w-container-max mx-auto">
+<a class="flex items-center gap-3 shrink-0" href="index.html">
+<img alt="Commune de Lomé — logo du portail" class="h-11 w-11 shrink-0 object-contain" height="44" src="assets/logo-mairie.svg" width="44"/>
+<span class="text-title-md font-title-md font-bold text-on-secondary-fixed whitespace-nowrap">Commune de Lomé</span>
 </a>
-</div>
-<div class="hidden md:flex items-center gap-8 lg:gap-10 flex-nowrap shrink-0 font-title-md text-title-md font-Montserrat">
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="services.html">Services</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="actualites.html">Actualités</a>
-<a class="text-tertiary font-bold border-b-2 border-tertiary pb-1" href="mairie.html">La Mairie</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="evenements.html">Culture</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="urbanisme.html">Investir</a>
-</div>
-<div class="flex items-center gap-6">
-<button class="material-symbols-outlined text-primary text-2xl hover:scale-105 transition-transform" data-icon="search">search</button>
-<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-title-md text-sm hover:scale-105 transition-all inline-flex items-center justify-center" href="espace-citoyen.html">
-                    Mon Espace
-                </a>
-</div>
+<nav class="hidden md:flex flex-nowrap items-center gap-8 lg:gap-10 shrink-0">
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary font-label-sm text-label-sm transition-all duration-300 whitespace-nowrap" href="index.html">Accueil</a>
+<a class="text-secondary dark:text-tertiary-fixed font-bold border-b-2 border-secondary dark:border-tertiary-fixed pb-1 font-label-sm text-label-sm whitespace-nowrap" href="mairie.html">La Mairie</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary font-label-sm text-label-sm transition-all duration-300 whitespace-nowrap" href="services.html">Citoyenneté</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary font-label-sm text-label-sm transition-all duration-300 whitespace-nowrap" href="urbanisme.html">Urbanisme</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary font-label-sm text-label-sm transition-all duration-300 whitespace-nowrap" href="fiscalite.html">Fiscalité</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary font-label-sm text-label-sm transition-all duration-300 whitespace-nowrap" href="actualites.html">Actualités</a>
 </nav>
+<a class="bg-on-secondary-fixed text-white px-6 py-2.5 rounded-full font-label-sm text-label-sm hover:scale-105 transition-transform duration-300 inline-flex items-center justify-center" href="espace-citoyen.html">
+                E-Services
+            </a>
+</div>
 </header>
 <main class="pt-20">
 <!-- Hero Section -->
 <section class="relative h-[870px] w-full flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img alt="Mairie de Lomé" class="w-full h-full object-cover" data-alt="A grand, architectural panoramic view of the Lomé City Hall building in Togo during a bright, sunny afternoon. The structure is a blend of modern and colonial West African styles, with clean geometric lines and lush tropical landscaping in the foreground. The lighting is crisp and golden, emphasizing the prestige and civic importance of the location within a vibrant city context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8ezkie-q8kPQmLoSF5w72ZNL7Zx195tl943MvGWBz6pr_YcBro1DtSLIjBm4u2-5IDGCWVjB5zO7hEU_dgLit85nqL-7IkEmtRH2td2nxnDHydgqodK4Nsc-rr9EaVwqxZ47KHQOU8OpvKVQy9KioA3yuuN6AsFg_a6Bdbl1SlH78_nIKDEOhvH_nr9-2a7SrXNvV0EfA4PSwItiinNuQmRix16MZQFEHRh6ZBbLcpGiz0jUgpZLAazp8NoB_YfD_7Pvfv9VHtA"/>
+<img alt="Mairie de Lomé" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop"/>
 <div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
 </div>
 <div class="relative z-10 px-margin-desktop w-full max-w-container-max mx-auto">
@@ -166,7 +162,7 @@
 <div class="relative group">
 <div class="absolute -inset-4 bg-tertiary/10 rounded-3xl -rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
 <div class="relative h-[600px] overflow-hidden rounded-2xl shadow-2xl">
-<img alt="Maire Koffi Mensah" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A dignified portrait of a West African male official, Mayor Koffi Mensah, wearing a sharp, deep charcoal suit with a subtle gold lapel pin. He stands in a bright, modern office with soft daylight and a background blur showing books and a Togolese flag. The mood is professional, welcoming, and exudes visionary leadership within a high-end minimalist setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_8HaOpFyGJwXIQX_a4wCl5eNG8dHOj_Qe6YPGp3p6sBUMpLCeXSQrSYIqZdRNGDx9nKzvm6geXIJMb4oD1Y2FIX4EcdDtbKQgdSUUjB0bdLAkI4XKCl6_4se57p_WYKpRpD-se4FI2k07ZM82zZwEbtIrycdS2dwuiwPczXEw0LP374LuWSNwW_k7ii0s-nTUWzanbrn2LZBfHlOF1obLfBzo3JaK2i7xIu7HgO4kPHNToqsbgnsLfFulX3jRYd6DstOdxIFJ5Q"/>
+<img alt="Maire Koffi Mensah" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=1974&auto=format&fit=crop"/>
 </div>
 <div class="absolute bottom-8 left-8 right-8 glass-dark p-6 rounded-xl">
 <h3 class="text-white font-display-lg text-xl mb-1">M. Koffi Mensah</h3>
@@ -183,7 +179,7 @@
                         Nous travaillons chaque jour pour moderniser nos infrastructures et simplifier vos démarches administratives grâce à la digitalisation. Ensemble, faisons de Lomé la perle de l'Afrique de l'Ouest.
                     </p>
 <div class="pt-8 border-t border-surface-variant">
-<img alt="Signature" class="h-16 w-auto opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB82jfjPMuArKzza18gr4YsuHr6zzPLwpuxfHZvoRHJTpeBchOiKCH_UnEzIHI34cQ_atnKIXMfBb7uCwKX_1gsF9tUvUoqs2d8DKr0iUQuyA5egAd_XatpRwN3AZiAmSdJ_WdJm-TwKT-SOzpDyHwYtZLlLwUEW6s6F3s4h8E8qJmDXRG-f8FryFutmiDDlnDdh7-Z93J25wFLpSKCuXkfVI4fj0IdPIFwgAwUP-ggxo7GOgAIFsXk-aRc9nG8lkeLloKphuoIuA"/>
+<img alt="Signature" class="h-16 w-auto opacity-70" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Signature_of_John_Hancock.svg"/>
 </div>
 </div>
 </div>
@@ -246,7 +242,7 @@
     <!-- Membre 1 (Maire) -->
     <div class="group relative overflow-hidden rounded-[32px] bg-surface-container-low shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
         <div class="h-80 overflow-hidden">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_8HaOpFyGJwXIQX_a4wCl5eNG8dHOj_Qe6YPGp3p6sBUMpLCeXSQrSYIqZdRNGDx9nKzvm6geXIJMb4oD1Y2FIX4EcdDtbKQgdSUUjB0bdLAkI4XKCl6_4se57p_WYKpRpD-se4FI2k07ZM82zZwEbtIrycdS2dwuiwPczXEw0LP374LuWSNwW_k7ii0s-nTUWzanbrn2LZBfHlOF1obLfBzo3JaK2i7xIu7HgO4kPHNToqsbgnsLfFulX3jRYd6DstOdxIFJ5Q" alt="Koffi Mensah" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+            <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=1974&auto=format&fit=crop" alt="Koffi Mensah" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
         </div>
         <div class="p-6 text-center relative bg-white">
             <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-tertiary text-white w-12 h-12 rounded-full flex items-center justify-center border-4 border-white shadow-sm">
@@ -260,7 +256,7 @@
     <!-- Membre 2 -->
     <div class="group relative overflow-hidden rounded-[32px] bg-surface-container-low shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
         <div class="h-80 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" alt="Amina Traoré" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+            <img src="https://images.unsplash.com/photo-1589156280159-27698a70f29e?q=80&w=800&auto=format&fit=crop" alt="Amina Traoré" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
         </div>
         <div class="p-6 text-center bg-white">
             <h3 class="font-title-md text-xl text-primary mb-1">Mme Amina Traoré</h3>
@@ -271,7 +267,7 @@
     <!-- Membre 3 -->
     <div class="group relative overflow-hidden rounded-[32px] bg-surface-container-low shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
         <div class="h-80 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=80" alt="Komi Afatsao" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+            <img src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?q=80&w=800&auto=format&fit=crop" alt="Komi Afatsao" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
         </div>
         <div class="p-6 text-center bg-white">
             <h3 class="font-title-md text-xl text-primary mb-1">M. Komi Afatsao</h3>
@@ -282,7 +278,7 @@
     <!-- Membre 4 -->
     <div class="group relative overflow-hidden rounded-[32px] bg-surface-container-low shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
         <div class="h-80 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1531123897727-8f129e1bf98c?w=800&q=80" alt="Sena d'Almeida" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+            <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=800&auto=format&fit=crop" alt="Sena d'Almeida" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
         </div>
         <div class="p-6 text-center bg-white">
             <h3 class="font-title-md text-xl text-primary mb-1">Mme Sena d'Almeida</h3>
@@ -367,12 +363,12 @@
 </div>
 <div class="w-full md:w-1/2 grid grid-cols-2 gap-4 order-1 md:order-2">
 <div class="space-y-4 pt-12">
-<img alt="Lomé Historique" class="rounded-2xl grayscale brightness-75 hover:grayscale-0 hover:brightness-100 transition-all duration-500 w-full aspect-square object-cover" data-alt="A historical black and white photograph of an old West African government building from the early 20th century. The architecture features wide arched verandas and colonial facades, surrounded by palm trees and unpaved roads. The image has a soft, vintage grainy texture, evoking a sense of deep history and the origins of municipal governance in Lomé." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgOIsbXlIz4axavBs5QTvimDVpK0xrfYXhHyYKtBB5EGQLly2EM-0MKM3x5ogtoUbQzZfDw4_kxV6q3yGCm7gF6HE41hHMDCfn5QIxjzxfnBLbMvLbee8mf8LR3UzIBNSF3l6vr1havRamtcAPZdQ_Hut2Mykp4Z-W87vlmmQwGjZ0GFZO87sqgTOVCR40CyaosdMFTHZNNZnOz2Ogt-WKm5GfB_CnNTk92SVpDaUjJNND6V3SqAwANdJgABVz6lmoecpRSkcOog"/>
-<img alt="Lomé Moderne" class="rounded-2xl w-full aspect-[3/4] object-cover" data-alt="A modern architectural interior shot of a contemporary government office in Lomé. Large windows floor the space with bright sunlight, highlighting clean white surfaces, polished floors, and high-end minimalist furniture. The view through the window shows the bustling, modern skyline of Togo's capital. The lighting is high-key and professional, representing futuristic civic trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuYxZQWNKl5CDGll6_v7Iti25BqrYqlYRrfJa-bzcMbHAWoQDyO38-_Mfw5Na-aQ5_q3g_QCqmMtNXjFgf5iHTFfN2BxKONM5_edI-gV41Gr5ab6gT8xd_EA3K1Gc9vwa6hebt5mnWwo0Y54aHu64BaGRm9_vhbmvsLbFnXQ9_9IEflMAQ1ttdX7a_ZwuNjboFnVrN4UHzNHiapPx24-SZK2hFrr_DOhr4pCYV_l5NkneKHfnO0Rx95mgY9mbv9CKlfTQJsJRNag"/>
+<img alt="Lomé Historique" class="rounded-2xl grayscale brightness-75 hover:grayscale-0 hover:brightness-100 transition-all duration-500 w-full aspect-square object-cover" src="https://images.unsplash.com/photo-1542178243-bc20204b769f?q=80&w=2000&auto=format&fit=crop"/>
+<img alt="Lomé Moderne" class="rounded-2xl w-full aspect-[3/4] object-cover" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop"/>
 </div>
 <div class="space-y-4">
-<img alt="Architecture Citadine" class="rounded-2xl w-full aspect-[3/4] object-cover" data-alt="A striking perspective of a modern office building exterior in Lomé, featuring glass cladding that reflects the blue sky and white clouds. The structure is sharp and geometric, symbolizing progress and digital sophistication. The foreground shows clean, modern urban planning with manicured greenery. The style is high-end minimalism with a luminous, transparent feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDPOzQALaN5eZg7U_zef-b8vv71fQjEarNwrCH1dgUp0T9bbPjShIPADwiC8BaQuK3kIeUh_-3TPvfmr3rTYeP2Cr1qdUE8oR-BbZdzgJi12iYl7hwa-5dVbMH_KrBj0bwand6SrcvqAcT-bM7be86J2a_uHJCiDKYoNz1GvIAaMQP1VlGnWq4sjUNXj-TCZtzSKELNi_uEztyiAj6_jLdnrMNazHptEb_FvTdehNQcnu-50v72ACBDa9LixmTX_gSwOBosnVIug"/>
-<img alt="Cérémonie Civique" class="rounded-2xl grayscale brightness-75 hover:grayscale-0 transition-all duration-500 w-full aspect-square object-cover" data-alt="An archive photograph of a formal civic ceremony in Lomé from the mid-20th century. Local leaders and citizens are gathered in front of a monumental civic arch, with flags waving in the breeze. The scene is captured in high-contrast black and white, preserving a moment of national pride and historical transition. The mood is solemn yet hopeful." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChInCZO_ncszVEJqrYX3_RZZ8oQDpf8-UNX5WlMXvilbH8PV8ILsnXwA7BfXAoX60fpjkKP1KdL0aOXAfBJOGEiZxUDHFfo0sgsNpUg2FIXMCHZ9Lf6SYhJtXukzCF_5F6x3geHCMucRTv1j1479dAJzFvPP_fs8KJcxC0HBE4WRt0CXHY13NlD79ktDB7Qg8fi3vHhyPUQJdk30mbitHjrvm5d78_gQw-L-Whe2_qVOqQfT7yVzmhfyTKaha7Qrdzw7-K0mBrOw"/>
+<img alt="Architecture Citadine" class="rounded-2xl w-full aspect-[3/4] object-cover" src="https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=2000&auto=format&fit=crop"/>
+<img alt="Cérémonie Civique" class="rounded-2xl grayscale brightness-75 hover:grayscale-0 transition-all duration-500 w-full aspect-square object-cover" src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2000&auto=format&fit=crop"/>
 </div>
 </div>
 </div>
